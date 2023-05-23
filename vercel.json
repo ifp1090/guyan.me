@@ -1,18 +1,8 @@
 {
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@vercel/static-build",
-      "config": { "distDir": "public" }
+  "build": {
+    "env": {
+      "HUGO_VERSION": "0.111.3",
+      "HUGO_ENV": "production"
     }
-  ],
-  "probes": [
-    {
-      "path": "/",
-      "mustContain": "Guyan's Site"
-    }
-  ],
-  "env": {
-    "HUGO_VERSION": "0.111.3"
   }
 }
