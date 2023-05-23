@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>古严的第一本书</title>
+    <link>https://example.com/docs/shortcodes/</link>
+    <description>Recent content on 古严的第一本书</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://example.com/docs/shortcodes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>https://example.com/docs/shortcodes/columns/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/docs/shortcodes/columns/</guid>
+      <description> 分栏 # Columns help organize shorter pieces of content horizontally for readability.
+{{&amp;lt; columns &amp;gt;}} &amp;lt;!-- begin columns block --&amp;gt; # 左边栏 内容123... &amp;lt;---&amp;gt; &amp;lt;!-- magic separator, between columns --&amp;gt; # 中间栏 内容123... &amp;lt;---&amp;gt; &amp;lt;!-- magic separator, between columns --&amp;gt; # 右边栏 内容123... {{&amp;lt; /columns &amp;gt;}} 样例 # 左边栏 # 内容123&amp;hellip; 中间栏 # 内容123&amp;hellip; 右边栏 # 内容123&amp;hellip; </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/docs/shortcodes/expand/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/docs/shortcodes/expand/</guid>
+      <description> Expand # 扩展短代码能够通过隐藏过多文本的部分文本，以增强屏幕内容的简洁。做法是默认将这些详细内容隐藏，引导用户通过单击文字展开具体内容。
+示例代码 # {{&amp;lt; expand &amp;#34;为什么？&amp;#34; &amp;#34;...&amp;#34; &amp;gt;}} ## 这个判断是对的，但是只对了一半...... {{&amp;lt; /expand &amp;gt;}} 这个判断是对的，但是只对了一半。
+为什么？ ... 对于ChatGPT而言 # 它的文本总结功能，并不是单单的纯粹文本的算法总结，还可以通过改变提示，让它专注于某些特定的内容，在你想要获得的特征上。 </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/docs/shortcodes/hints/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/docs/shortcodes/hints/</guid>
+      <description>Hints # Hint shortcode can be used as hint/alerts/notification block.
+There are 3 colors to choose: info, warning and danger.
+{{&amp;lt; hint [info|warning|danger] &amp;gt;}} #### 告知 内容123 {{&amp;lt; /hint &amp;gt;}} Example # 告知 # Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat stringit, frustra Saturnius uteroque inter! Oculis non ritibus Telethusa Markdown content
+Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat stringit, frustra Saturnius uteroque inter!</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/docs/shortcodes/tabs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/docs/shortcodes/tabs/</guid>
+      <description>Tabs # Tabs let you organize content by context, for example installation instructions for each supported platform.
+{{&amp;lt; tabs &amp;#34;uniqueid&amp;#34; &amp;gt;}} {{&amp;lt; tab &amp;#34;MacOS&amp;#34; &amp;gt;}} # MacOS Content {{&amp;lt; /tab &amp;gt;}} {{&amp;lt; tab &amp;#34;Linux&amp;#34; &amp;gt;}} # Linux Content {{&amp;lt; /tab &amp;gt;}} {{&amp;lt; tab &amp;#34;Windows&amp;#34; &amp;gt;}} # Windows Content {{&amp;lt; /tab &amp;gt;}} {{&amp;lt; /tabs &amp;gt;}} Example # MacOS MacOS # This is tab MacOS content.
+Lorem markdownum insigne. Olympo signis Delphis!</description>
+    </item>
+    
+  </channel>
+</rss>
