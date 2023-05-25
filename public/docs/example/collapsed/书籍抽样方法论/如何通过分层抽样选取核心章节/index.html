@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="如何通过分层抽样选取核心章节？ # 在前面提到了通过 整群抽样 方法抽取一本书的核心章群，通过一次性选取一个或多个「章节群」来形成章节集合的大样本开始阅读。这种方法的好处在于能够最大程度挖掘抽中章群的内容，强调对章节群的纵向理解深度。但这种方法带来的一个偏差在于，由于整群抽样偏纵向，因此无法对全书内容进行横向的抽样覆盖。解决这个问题的方法之一就是分层抽样。
+什么是阅读的分层抽样？ # 就是当我们拿到一本书后，我们首先确认这本书中包含的不同特征（比如性别、身份、参考文献引用、人名等）将整本书分成具有各自特征的章群，分类的结果是每一章都各自从属于各自的特征群。然后借助简单随机抽样方法对这些特征章群进行章节抽样，最后抽取了具有不同特征章群的章节组成一个「小集合」进行文本细读。
+分层抽样的步骤 # 1.确认全书的差异化分层标准 # 在《聪明的阅读者》一书中，阳老师介绍了两种分层方法：
+分层方法 描述 身份/角色 对于书中出现不同身份的人物进行分类汇总 核心章节 将反映全书核心章节的标准进行分类汇总 当然除此之外，还可以采用篇幅占比、论文引用等。
+分层方法 描述 篇幅占比 对书中章节所占全书、部分的篇幅进行分类汇总 论文引用 对书中作者高引论文的相关章节进行分类汇总 关键词 通过词频分析等梳理的关键词对章节分类汇总 2.将章节划分到不同标准层 # 将全书的章节按照确认的标准，分配到每个标准层中。这里需要注意的是每个标准层都是互斥关系，它们之间没有重叠，但包含了整本书的内容。
+操作方法如下「示例」：
+分层方法 描述 示例 身份/角色 对于书中出现不同身份的人物进行分类汇总 身份A:123；身份B:456 核心章节 将反映全书核心章节的标准进行分类汇总 引用自己文献:123；引用别人文献:456 当然除此之外，还可以采用篇幅占比、论文引用等。
+分层方法 描述 示例 篇幅占比 对书中章节所占全书、部分的篇幅进行分类汇总 全书篇幅TOP3:123；主题TOP3:456 论文引用 对书中作者高引论文的相关章节进行分类汇总 高引论文A:123；高引论文B：456 关键词 通过词频分析等梳理的关键词对章节分类汇总 关键词A:123；关键词B：456 3.确认每个标准层的样本量 # 一旦我们将全书所有章节进行了标准层分类，就可以进入抽样环节。如果分层后每层的章节数量差不多，就可以直接设定抽样比，比如7章中抽取2章；如果每层包含的章节数量不一致（甚至差异更大），就可以采取非比例抽样，比如对于某些包含章节数量更多的层级赋予更多的抽样数量。
+以《如何达成目标》为例，这本书默认将全书分层了三个部分：
+这本书包含的章节数量如下：
+序号 主题 章节数量 1 准备就绪 2 2 预备开始 5 3 行动起来 6 如果我们对这三个主题采用相同的抽样比例（比如都抽取1章）那么对于后两个部分的权重抽取可能会产生偏差，这时候我们就需要主动提高对后两个部分的抽样比（比如各抽取2章）。">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="04.分层抽样" />
+<meta property="og:description" content="如何通过分层抽样选取核心章节？ # 在前面提到了通过 整群抽样 方法抽取一本书的核心章群，通过一次性选取一个或多个「章节群」来形成章节集合的大样本开始阅读。这种方法的好处在于能够最大程度挖掘抽中章群的内容，强调对章节群的纵向理解深度。但这种方法带来的一个偏差在于，由于整群抽样偏纵向，因此无法对全书内容进行横向的抽样覆盖。解决这个问题的方法之一就是分层抽样。
+什么是阅读的分层抽样？ # 就是当我们拿到一本书后，我们首先确认这本书中包含的不同特征（比如性别、身份、参考文献引用、人名等）将整本书分成具有各自特征的章群，分类的结果是每一章都各自从属于各自的特征群。然后借助简单随机抽样方法对这些特征章群进行章节抽样，最后抽取了具有不同特征章群的章节组成一个「小集合」进行文本细读。
+分层抽样的步骤 # 1.确认全书的差异化分层标准 # 在《聪明的阅读者》一书中，阳老师介绍了两种分层方法：
+分层方法 描述 身份/角色 对于书中出现不同身份的人物进行分类汇总 核心章节 将反映全书核心章节的标准进行分类汇总 当然除此之外，还可以采用篇幅占比、论文引用等。
+分层方法 描述 篇幅占比 对书中章节所占全书、部分的篇幅进行分类汇总 论文引用 对书中作者高引论文的相关章节进行分类汇总 关键词 通过词频分析等梳理的关键词对章节分类汇总 2.将章节划分到不同标准层 # 将全书的章节按照确认的标准，分配到每个标准层中。这里需要注意的是每个标准层都是互斥关系，它们之间没有重叠，但包含了整本书的内容。
+操作方法如下「示例」：
+分层方法 描述 示例 身份/角色 对于书中出现不同身份的人物进行分类汇总 身份A:123；身份B:456 核心章节 将反映全书核心章节的标准进行分类汇总 引用自己文献:123；引用别人文献:456 当然除此之外，还可以采用篇幅占比、论文引用等。
+分层方法 描述 示例 篇幅占比 对书中章节所占全书、部分的篇幅进行分类汇总 全书篇幅TOP3:123；主题TOP3:456 论文引用 对书中作者高引论文的相关章节进行分类汇总 高引论文A:123；高引论文B：456 关键词 通过词频分析等梳理的关键词对章节分类汇总 关键词A:123；关键词B：456 3.确认每个标准层的样本量 # 一旦我们将全书所有章节进行了标准层分类，就可以进入抽样环节。如果分层后每层的章节数量差不多，就可以直接设定抽样比，比如7章中抽取2章；如果每层包含的章节数量不一致（甚至差异更大），就可以采取非比例抽样，比如对于某些包含章节数量更多的层级赋予更多的抽样数量。
+以《如何达成目标》为例，这本书默认将全书分层了三个部分：
+这本书包含的章节数量如下：
+序号 主题 章节数量 1 准备就绪 2 2 预备开始 5 3 行动起来 6 如果我们对这三个主题采用相同的抽样比例（比如都抽取1章）那么对于后两个部分的权重抽取可能会产生偏差，这时候我们就需要主动提高对后两个部分的抽样比（比如各抽取2章）。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://example.com/docs/example/collapsed/%E4%B9%A6%E7%B1%8D%E6%8A%BD%E6%A0%B7%E6%96%B9%E6%B3%95%E8%AE%BA/%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87%E5%88%86%E5%B1%82%E6%8A%BD%E6%A0%B7%E9%80%89%E5%8F%96%E6%A0%B8%E5%BF%83%E7%AB%A0%E8%8A%82/" /><meta property="article:section" content="docs" />
+
+
+<title>04.分层抽样 | GY‘s 1th BOOK</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.4f0117e74e5337280f18eb9641eae520cb4b25adcf5dd64fafad4664145a5957.css" integrity="sha256-TwEX505TNygPGOuWQerlIMtLJa3PXdZPr61GZBRaWVc=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.a92198edacd29e6c64ae7350a87c52942e3bec3159e35808b49eb419ab3a63bf.js" integrity="sha256-qSGY7azSnmxkrnNQqHxSlC477DFZ41gItJ60Gas6Y78=" crossorigin="anonymous"></script>
+
+  <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>GY‘s 1th BOOK</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <a href="/docs/example/" class="">Example Site</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/table-of-contents/" class="">Table of Contents</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/table-of-contents/with-toc/" class="">含目录</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/table-of-contents/without-toc/" class="">不含目录</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-4e46b01272d410b3a99461d79326ddf4" class="toggle" checked />
+    <label for="section-4e46b01272d410b3a99461d79326ddf4" class="flex justify-between">
+      <a role="button" class="">Collapsed</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/collapsed/%E4%B9%A6%E7%B1%8D%E6%8A%BD%E6%A0%B7%E6%96%B9%E6%B3%95%E8%AE%BA/" class="">书籍抽样方法论</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/collapsed/%E4%B9%A6%E7%B1%8D%E6%8A%BD%E6%A0%B7%E6%96%B9%E6%B3%95%E8%AE%BA/%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87%E7%AE%80%E5%8D%95%E9%9A%8F%E6%9C%BA%E6%8A%BD%E6%A0%B7%E9%80%89%E5%8F%96%E6%A0%B8%E5%BF%83%E7%AB%A0%E8%8A%82/" class="">01.简单随机抽样</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/collapsed/%E4%B9%A6%E7%B1%8D%E6%8A%BD%E6%A0%B7%E6%96%B9%E6%B3%95%E8%AE%BA/%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87%E7%AD%89%E8%B7%9D%E6%8A%BD%E6%A0%B7%E9%80%89%E5%8F%96%E6%A0%B8%E5%BF%83%E7%AB%A0%E8%8A%82/" class="">02.等距抽样</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/collapsed/%E4%B9%A6%E7%B1%8D%E6%8A%BD%E6%A0%B7%E6%96%B9%E6%B3%95%E8%AE%BA/%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87%E6%95%B4%E7%BE%A4%E6%8A%BD%E6%A0%B7%E9%80%89%E5%8F%96%E6%A0%B8%E5%BF%83%E7%AB%A0%E7%BE%A4/" class="">03.整群抽样</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/collapsed/%E4%B9%A6%E7%B1%8D%E6%8A%BD%E6%A0%B7%E6%96%B9%E6%B3%95%E8%AE%BA/%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87%E5%88%86%E5%B1%82%E6%8A%BD%E6%A0%B7%E9%80%89%E5%8F%96%E6%A0%B8%E5%BF%83%E7%AB%A0%E8%8A%82/" class="active">04.分层抽样</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Shortcodes</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/shortcodes/columns/" class="">Columns</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/shortcodes/Details/" class="">Details</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/shortcodes/hints/" class="">Hints</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-d3fc1bf6d66cd84b896a0af9f40cb1d5" class="toggle"  />
+    <label for="section-d3fc1bf6d66cd84b896a0af9f40cb1d5" class="flex justify-between">
+      <a href="/docs/shortcodes/section/" class="">Section</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/shortcodes/section/first-page/" class="">First Page</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/shortcodes/section/second-page/" class="">Second Page</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/shortcodes/tabs/" class="">Tabs</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="https://github.com/alex-shpak/hugo-book"  target="_blank" rel="noopener">
+        想说的话
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>04.分层抽样</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#如何通过分层抽样选取核心章节">如何通过分层抽样选取核心章节？</a>
+      <ul>
+        <li><a href="#什么是阅读的分层抽样">什么是阅读的分层抽样？</a></li>
+        <li><a href="#分层抽样的步骤">分层抽样的步骤</a>
+          <ul>
+            <li><a href="#1确认全书的差异化分层标准">1.确认全书的差异化分层标准</a></li>
+            <li><a href="#2将章节划分到不同标准层">2.将章节划分到不同标准层</a></li>
+            <li><a href="#3确认每个标准层的样本量">3.确认每个标准层的样本量</a></li>
+            <li><a href="#4从每层中进行随机章节抽样">4.从每层中进行随机章节抽样</a></li>
+          </ul>
+        </li>
+        <li><a href="#分层抽样的图示理解">分层抽样的图示理解</a></li>
+        <li><a href="#分层章节抽样与整群章节抽样的差异">分层章节抽样与整群章节抽样的差异</a></li>
+        <li><a href="#changelog">Changelog</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="如何通过分层抽样选取核心章节">
+  如何通过分层抽样选取核心章节？
+  <a class="anchor" href="#%e5%a6%82%e4%bd%95%e9%80%9a%e8%bf%87%e5%88%86%e5%b1%82%e6%8a%bd%e6%a0%b7%e9%80%89%e5%8f%96%e6%a0%b8%e5%bf%83%e7%ab%a0%e8%8a%82">#</a>
+</h1>
+<p>在前面提到了通过 <strong>整群抽样</strong> 方法抽取一本书的核心章群，通过一次性选取一个或多个「章节群」来形成章节集合的大样本开始阅读。这种方法的好处在于能够最大程度挖掘抽中章群的内容，强调对章节群的纵向理解深度。但这种方法带来的一个偏差在于，由于整群抽样偏纵向，因此无法对全书内容进行横向的抽样覆盖。解决这个问题的方法之一就是分层抽样。</p>
+<h2 id="什么是阅读的分层抽样">
+  什么是阅读的分层抽样？
+  <a class="anchor" href="#%e4%bb%80%e4%b9%88%e6%98%af%e9%98%85%e8%af%bb%e7%9a%84%e5%88%86%e5%b1%82%e6%8a%bd%e6%a0%b7">#</a>
+</h2>
+<p>就是当我们拿到一本书后，我们首先确认这本书中包含的不同特征（比如性别、身份、参考文献引用、人名等）将整本书分成具有各自特征的章群，分类的结果是每一章都各自从属于各自的特征群。然后借助简单随机抽样方法对这些特征章群进行章节抽样，最后抽取了具有不同特征章群的章节组成一个「小集合」进行文本细读。</p>
+<h2 id="分层抽样的步骤">
+  分层抽样的步骤
+  <a class="anchor" href="#%e5%88%86%e5%b1%82%e6%8a%bd%e6%a0%b7%e7%9a%84%e6%ad%a5%e9%aa%a4">#</a>
+</h2>
+<h3 id="1确认全书的差异化分层标准">
+  1.确认全书的差异化分层标准
+  <a class="anchor" href="#1%e7%a1%ae%e8%ae%a4%e5%85%a8%e4%b9%a6%e7%9a%84%e5%b7%ae%e5%bc%82%e5%8c%96%e5%88%86%e5%b1%82%e6%a0%87%e5%87%86">#</a>
+</h3>
+<p>在《聪明的阅读者》一书中，阳老师介绍了两种分层方法：</p>
+<table>
+<thead>
+<tr>
+<th>分层方法</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>身份/角色</td>
+<td>对于书中出现不同身份的人物进行分类汇总</td>
+</tr>
+<tr>
+<td>核心章节</td>
+<td>将反映全书核心章节的标准进行分类汇总</td>
+</tr>
+</tbody>
+</table>
+<p>当然除此之外，还可以采用篇幅占比、论文引用等。</p>
+<table>
+<thead>
+<tr>
+<th>分层方法</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>篇幅占比</td>
+<td>对书中章节所占全书、部分的篇幅进行分类汇总</td>
+</tr>
+<tr>
+<td>论文引用</td>
+<td>对书中作者高引论文的相关章节进行分类汇总</td>
+</tr>
+<tr>
+<td>关键词</td>
+<td>通过词频分析等梳理的关键词对章节分类汇总</td>
+</tr>
+</tbody>
+</table>
+<h3 id="2将章节划分到不同标准层">
+  2.将章节划分到不同标准层
+  <a class="anchor" href="#2%e5%b0%86%e7%ab%a0%e8%8a%82%e5%88%92%e5%88%86%e5%88%b0%e4%b8%8d%e5%90%8c%e6%a0%87%e5%87%86%e5%b1%82">#</a>
+</h3>
+<p>将全书的章节按照确认的标准，分配到每个标准层中。这里需要注意的是每个标准层都是互斥关系，它们之间没有重叠，但包含了整本书的内容。</p>
+<p>操作方法如下「示例」：</p>
+<table>
+<thead>
+<tr>
+<th>分层方法</th>
+<th>描述</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>身份/角色</td>
+<td>对于书中出现不同身份的人物进行分类汇总</td>
+<td>身份A:123；身份B:456</td>
+</tr>
+<tr>
+<td>核心章节</td>
+<td>将反映全书核心章节的标准进行分类汇总</td>
+<td>引用自己文献:123；引用别人文献:456</td>
+</tr>
+</tbody>
+</table>
+<p>当然除此之外，还可以采用篇幅占比、论文引用等。</p>
+<table>
+<thead>
+<tr>
+<th>分层方法</th>
+<th>描述</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>篇幅占比</td>
+<td>对书中章节所占全书、部分的篇幅进行分类汇总</td>
+<td>全书篇幅TOP3:123；主题TOP3:456</td>
+</tr>
+<tr>
+<td>论文引用</td>
+<td>对书中作者高引论文的相关章节进行分类汇总</td>
+<td>高引论文A:123；高引论文B：456</td>
+</tr>
+<tr>
+<td>关键词</td>
+<td>通过词频分析等梳理的关键词对章节分类汇总</td>
+<td>关键词A:123；关键词B：456</td>
+</tr>
+</tbody>
+</table>
+<h3 id="3确认每个标准层的样本量">
+  3.确认每个标准层的样本量
+  <a class="anchor" href="#3%e7%a1%ae%e8%ae%a4%e6%af%8f%e4%b8%aa%e6%a0%87%e5%87%86%e5%b1%82%e7%9a%84%e6%a0%b7%e6%9c%ac%e9%87%8f">#</a>
+</h3>
+<p>一旦我们将全书所有章节进行了标准层分类，就可以进入抽样环节。如果分层后每层的章节数量差不多，就可以直接设定抽样比，比如7章中抽取2章；如果每层包含的章节数量不一致（甚至差异更大），就可以采取非比例抽样，比如对于某些包含章节数量更多的层级赋予更多的抽样数量。</p>
+<p>以《如何达成目标》为例，这本书默认将全书分层了三个部分：</p>
+<p>
+  <img src="https://pbox.online/202305252034815.png" alt="image-20230525203429777" /></p>
+<p>这本书包含的章节数量如下：</p>
+<table>
+<thead>
+<tr>
+<th>序号</th>
+<th>主题</th>
+<th>章节数量</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>准备就绪</td>
+<td>2</td>
+</tr>
+<tr>
+<td>2</td>
+<td>预备开始</td>
+<td>5</td>
+</tr>
+<tr>
+<td>3</td>
+<td>行动起来</td>
+<td>6</td>
+</tr>
+</tbody>
+</table>
+<p>如果我们对这三个主题采用相同的抽样比例（比如都抽取1章）那么对于后两个部分的权重抽取可能会产生偏差，这时候我们就需要主动提高对后两个部分的抽样比（比如各抽取2章）。</p>
+<h3 id="4从每层中进行随机章节抽样">
+  4.从每层中进行随机章节抽样
+  <a class="anchor" href="#4%e4%bb%8e%e6%af%8f%e5%b1%82%e4%b8%ad%e8%bf%9b%e8%a1%8c%e9%9a%8f%e6%9c%ba%e7%ab%a0%e8%8a%82%e6%8a%bd%e6%a0%b7">#</a>
+</h3>
+<p>这时候就通过简单随机抽样方法（比如通过 <strong>
+  <a href="www.trialstats.com">试验统计网</a></strong> ）对每层的章节进行抽样，这样将获得代表每个层级属性的章节。</p>
+<p>然后就可以开始文本细读流程了。</p>
+<h2 id="分层抽样的图示理解">
+  分层抽样的图示理解
+  <a class="anchor" href="#%e5%88%86%e5%b1%82%e6%8a%bd%e6%a0%b7%e7%9a%84%e5%9b%be%e7%a4%ba%e7%90%86%e8%a7%a3">#</a>
+</h2>
+<p>通过下图可以简化对全书分层抽样的理解：</p>
+<p>
+  <img src="https://pbox.online/202305252034130.png" alt="Snipaste_2023-05-25_20-09-08" /></p>
+<h2 id="分层章节抽样与整群章节抽样的差异">
+  分层章节抽样与整群章节抽样的差异
+  <a class="anchor" href="#%e5%88%86%e5%b1%82%e7%ab%a0%e8%8a%82%e6%8a%bd%e6%a0%b7%e4%b8%8e%e6%95%b4%e7%be%a4%e7%ab%a0%e8%8a%82%e6%8a%bd%e6%a0%b7%e7%9a%84%e5%b7%ae%e5%bc%82">#</a>
+</h2>
+<p>如果看过 <strong>整群章节抽样</strong> 的介绍，会发现分层章节抽样与整群章节抽样都有将章节组成「章群」的步骤，所以它们看起来可能比较相似。但依然有明显差异：在整群抽样中获得的章群中的章节，他们彼此有着不太一致的特征，各个章节只是居于笼统大体的方向和主题关联在一起；而分层章节抽样创建的章节群的章节有着明显的相同特质。所以通过整群章节抽样后，我们下一步需要对整个章群进行增细阅读；而分层章节的目标是获得具有不同属性的章节群，然后再从各个章节群中抽样出少量代表该章节样本的章节，最终汇总起来开始文本细读。</p>
+<p>分层章节抽样与整群章节抽样的差异可以用如下图示进行简化：</p>
+<img src="https://pbox.online/202305252033432.png" alt="Snipaste_2023-05-25_20-11-46" style="zoom:50%;" />
+<h2 id="changelog">
+  Changelog
+  <a class="anchor" href="#changelog">#</a>
+</h2>
+<p>20230525 1.0</p>
+<p>Ref：</p>
+<p>《聪明的阅读者》</p>
+<p>
+  <a href="https://en.wikipedia.org/wiki/Cluster_sampling">Wiki-Cluster sampling</a></p>
+<p>
+  <a href="https://en.wikipedia.org/wiki/Stratified_sampling">Wiki-Stratified_sampling</a></p>
+<p>
+  <a href="https://www.scribbr.com/methodology/cluster-sampling/">Scribbr-Cluster Sampling</a></p>
+<p>
+  <a href="https://www.scribbr.com/methodology/stratified-sampling/">Scribbr-Stratified Sampling</a></p>
+<p>
+  <a href="https://www.voxco.com/blog/stratified-sampling-vs-cluster-sampling/">Voxco-Stratified Sampling vs Cluster Sampling</a></p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#如何通过分层抽样选取核心章节">如何通过分层抽样选取核心章节？</a>
+      <ul>
+        <li><a href="#什么是阅读的分层抽样">什么是阅读的分层抽样？</a></li>
+        <li><a href="#分层抽样的步骤">分层抽样的步骤</a>
+          <ul>
+            <li><a href="#1确认全书的差异化分层标准">1.确认全书的差异化分层标准</a></li>
+            <li><a href="#2将章节划分到不同标准层">2.将章节划分到不同标准层</a></li>
+            <li><a href="#3确认每个标准层的样本量">3.确认每个标准层的样本量</a></li>
+            <li><a href="#4从每层中进行随机章节抽样">4.从每层中进行随机章节抽样</a></li>
+          </ul>
+        </li>
+        <li><a href="#分层抽样的图示理解">分层抽样的图示理解</a></li>
+        <li><a href="#分层章节抽样与整群章节抽样的差异">分层章节抽样与整群章节抽样的差异</a></li>
+        <li><a href="#changelog">Changelog</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
