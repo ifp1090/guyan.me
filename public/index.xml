@@ -6,6 +6,32 @@
     <description>Recent content in Introduction on GY‘s 1th BOOK</description>
     <generator>Hugo -- gohugo.io</generator><atom:link href="https://example.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>01.简单随机抽样</title>
+      <link>https://example.com/docs/example/collapsed/3rd-level/20230521@%E6%8A%80%E5%B7%A7%E5%8D%A1@%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87%E7%AE%80%E5%8D%95%E9%9A%8F%E6%9C%BA%E6%8A%BD%E6%A0%B7%E9%80%89%E5%8F%96%E6%A0%B8%E5%BF%83%E7%AB%A0%E8%8A%82/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/docs/example/collapsed/3rd-level/20230521@%E6%8A%80%E5%B7%A7%E5%8D%A1@%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87%E7%AE%80%E5%8D%95%E9%9A%8F%E6%9C%BA%E6%8A%BD%E6%A0%B7%E9%80%89%E5%8F%96%E6%A0%B8%E5%BF%83%E7%AB%A0%E8%8A%82/</guid>
+      <description>如何通过简单随机抽样选取核心章节？ # 参考8020法则，一本书的核心权重是它占比的20%左右，根据不同书本平均每页的文字密度，可能会有1.1~1.6的系数差异（平均每页字数越多，系统相应会更大）。所以一本书的核心章节就可以按如下公式进行计算：
+核心章节 = 书本章节总数 × 20% × 系数（1.1~1.6）
+这里我们暂且将系数设为中位数1.3
+对于简单随机抽样，就是指对于一本书不进行任何解析判断，直接随机对核心章节进行取样。
+这里以统计网站 www.trialstats.com 对《行为科学统计》进行随机抽样示范。
+1.核心章节计算 # 比如我们要读《行为科学统计》这本书，而这本书一共有19章：
+如果要以随机抽样的方式阅读这本书，我们可以将前面的公式代入：
+《行为科学统计》核心章节 = 书本章节总数(19) × 20% × 中位系数（1.3）= 4.94 ≈ 5
+即《行为科学统计》这本书，我们想了解这本书的最小全局，最少需要随机抽样5章。
+2.随机抽样代入 # 我们打开统计网站 试验统计网 在首页点击标题栏 STATBOX：
+在 新窗口标题栏继续点击 随机-抽样-简单随机抽样
+新弹出「在线简单随机抽样」页面
+根据我们刚刚查看到的《行为科学统计》的章节总数、简单随机抽样数量填写。注意最后一步「随机种子」清空原始值留空。
+这样就弹出了随机抽样的章节：
+需要注意的是：
+简单随机抽样一般适合阅读起步阶段，比如我们对一本书没有掌握更好的权重章节识别方法，所以就利用简单随机抽样的方式来抽取这本书的章节进行阅读。这种方式能够更快让自己启动一本书的阅读进程，不至于一直陷入阅读困境。 因为是抽样结果具有随机性，所以上图的值如果第二次操作，可能会出现不同值。 如果学会了更多高阶阅读抽样方法，可以降低这种方法的使用权重。 Ref：
+《聪明的阅读者》
+20230521</description>
+    </item>
+    
+    <item>
       <title>含目录</title>
       <link>https://example.com/docs/example/table-of-contents/with-toc/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -13,6 +39,35 @@
       <guid>https://example.com/docs/example/table-of-contents/with-toc/</guid>
       <description>Caput vino delphine in tamen vias # Cognita laeva illo fracta # Lorem markdownum pavent auras, surgit nunc cingentibus libet Laomedonque que est. Pastor An arbor filia foedat, ne fugit aliter, per. Helicona illas et callida neptem est Oresitrophos caput, dentibus est venit. Tenet reddite famuli praesentem fortibus, quaeque vis foret si frondes gelidos gravidae circumtulit inpulit armenta nativum.
 Te at cruciabere vides rubentis manebo Maturuit in praetemptat ruborem ignara postquam habitasse Subitarum supplevit quoque fontesque venabula spretis modo Montis tot est mali quasque gravis Quinquennem domus arsit ipse Pellem turis pugnabant locavit Natus quaerere # Pectora et sine mulcere, coniuge dum tincta incurvae.</description>
+    </item>
+    
+    <item>
+      <title>02.等距抽样</title>
+      <link>https://example.com/docs/example/collapsed/3rd-level/20230522@%E6%8A%80%E5%B7%A7%E5%8D%A1@%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87%E7%AD%89%E8%B7%9D%E6%8A%BD%E6%A0%B7%E9%80%89%E5%8F%96%E6%A0%B8%E5%BF%83%E7%AB%A0%E8%8A%82/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/docs/example/collapsed/3rd-level/20230522@%E6%8A%80%E5%B7%A7%E5%8D%A1@%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87%E7%AD%89%E8%B7%9D%E6%8A%BD%E6%A0%B7%E9%80%89%E5%8F%96%E6%A0%B8%E5%BF%83%E7%AB%A0%E8%8A%82/</guid>
+      <description>如何通过等距抽样选取核心章节？ # 上篇文章中提到通过 简单随机抽样法 选取一本书的核心章节，我尝试通过试验统计网对《行为科学统计》这本书进行三次随机抽样，结果如下：
+随机抽样次数 抽样结果 第一次 4, 6, 9, 10, 14 第二次 1, 4, 6, 7, 8 第三次 1, 6, 7, 10, 12 参考上篇文章我们知道，《行为科学统计》全书一共19章，通过计算确定抽样5章，那如何进一步判断简单随机抽样的抽样合理性呢？一个简单的方法就是看抽样章节对全书篇幅的覆盖率。
+以第一次抽样的结果为例，我们如果想知道随机抽中的章节所未覆盖的章节数量的话，是这样的结果：
+如上图所示，灰色部分就是每轮抽样未覆盖的数量：
+第一轮：3/1/2/3/5 第二轮：2/1/11 第三轮：4/2/1/7 从上述结果来看，如果从全书抽样的覆盖率来看，除了第一次抽样结果相对合理，如果我们抽中了第二次或者第三次，那我们遗失全书章节的最大数量就分别是11章、7章，这就是简单随机抽样方法给我们带来的不利之处。
+如何解决？
+我们可以在简单随机抽样的基础上进行适当修正，这就是等距抽样。
+顾名思义，等距抽样就是将全书章节按照指定间隔进行章节抽取。如何判断指定间隔呢？这时候我们需要借鉴上一篇文章中提到的 简单随机抽样法 中的公式：
+抽样章节 = 书本章节总数 × 20% × 系数（1.1~1.6）
+注：为了计算方便，我们以后将系数默认设为1.3
+按照这个公式计算《行为科学统计》的抽样章节数量为5。
+然后我们再计算按照这个公式计算等距间隔数：
+全书章节总数 ÷ 抽样章节数 = 等距间隔数
+19/5 = 3.8 ≈ 4 （四舍五入）
+这样我们就确认了《行为科学统计》的间隔数量为4
+那么这本书我们需要抽样的章节就是第1章、第6章、第11章、第16章：
+按照8020原则，我们最终抽取的只是全书章节的20%，一般书籍的章节总数不会超过50，那么这个间隔最大不可能超过5。那我们可以按照这个数值制作一个等距抽样的Excel表格：
+表格链接在此，这样我们就可以直接通过表格来快速定位我们需要等距抽样的章节了。
+Ref：
+《聪明的阅读者》
+20230522</description>
     </item>
     
     <item>
@@ -26,13 +81,32 @@ Quam iugulum regia simulacra, plus meruit humo pecorumque haesit, ab discedunt d
     </item>
     
     <item>
-      <title></title>
-      <link>https://example.com/docs/example/collapsed/3rd-level/4th-level/</link>
+      <title>03.整群抽样</title>
+      <link>https://example.com/docs/example/collapsed/3rd-level/20230524@%E6%8A%80%E5%B7%A7%E5%8D%A1@%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87%E6%95%B4%E7%BE%A4%E6%8A%BD%E6%A0%B7%E9%80%89%E5%8F%96%E6%A0%B8%E5%BF%83%E7%AB%A0%E8%8A%82/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/docs/example/collapsed/3rd-level/4th-level/</guid>
-      <description>4th Level of Menu # Caesorum illa tu sentit micat vestes papyriferi # Inde aderam facti; Theseus vis de tauri illa peream. Oculos uberaque non regisque vobis cursuque, opus venit quam vulnera. Et maiora necemque, lege modo; gestanda nitidi, vero? Dum ne pectoraque testantur.
-Venasque repulsa Samos qui, exspectatum eram animosque hinc, aut manes, Assyrii. Cupiens auctoribus pariter rubet, profana magni super nocens. Vos ius sibilat inpar turba visae iusto!</description>
+      <guid>https://example.com/docs/example/collapsed/3rd-level/20230524@%E6%8A%80%E5%B7%A7%E5%8D%A1@%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87%E6%95%B4%E7%BE%A4%E6%8A%BD%E6%A0%B7%E9%80%89%E5%8F%96%E6%A0%B8%E5%BF%83%E7%AB%A0%E8%8A%82/</guid>
+      <description>如何通过整群抽样选取核心章节？ # 我们在前两篇抽样方法文章中分别提到两个书本抽样方法「简单随机抽样」和「等距抽样」，它们两种抽样方式都是从全书中只选择一些个别章节来判断权重。但很多书的作者在写书时就将章节进行了权重考量，
+比如一本书的安排是这样的：
+部分 章节 第一部分 1~2 第二部分 3 第三部分 4-10 第四部分 11-12 如果将上述四部分章节数量由多到少进行排序，会发现第三部分分配的章节最多。在这里我们做一个「章节数量多就是作者想更多介绍进而属于更权重章节的范畴」的假设，那么我们可能要优先阅读第三部分。但如果我们按照之前介绍的两种抽样方式，抽样结果可能会类似这样（随机）：
+简单随机抽样：3/7/11 等距抽样：1/5/9/13 这可能忽略了作者对章节进行整体归类的信号暗示，可能不容易抓住全书权重。
+如何解决？
+我们可以暂缓一次选择一个章节然后再汇总的抽样方法，而是一开始就选择一个「章群」抽样。
+整群抽样步骤如下：
+对全书章节进行整群分类 # 最基础的分类方法就是参考作者为全书章节的整体划分，比如《如何达成目标》一共有13章，但作者直接在目录中将其划分为「准备就绪、预备开始、行动起来」三个部分：
+又比如《人是如何学习的-II》全书一共10章，而在中文序中提到全书分成「文化的复杂影响、学习的类型与过程、知识与推理、学习动机、对学校学习的启示、学习技术、贯穿一生的学习」七大主题：
+《行为科学研究方法》在译者序中将全书16章分成五大部分：
+一旦我们通过这些信息获得了全书「章节群」的划分数量，就可以将其视为对整本书的整群抽样个数。
+使用简单随机抽样法抽取群章（部分/主题等） # 与「简单随机抽样」方式差不多，唯一区别在于我们通过简单随机抽样抽出来的是多个章节，而这时候我们只需要抽取其中1个群章即可，所以我们最终需要阅读的不是一个一个的章节，而是一个或多个章节群。
+需要注意的是 试验统计网不支持抽取数量为1的简单随机抽样，所以我们如果希望自己从选取的章节群中选取一个章节群进行阅读，只需要随机制定一个数字即可。比如《人是如何学习的-II》一共有7个主题，我们就在1~7中随机选择一个主题，然后根据该主题在目录中找到对应的章群；《如何达成目标》一书有3个部分，我们就从1~3中随机选择一部分，找到该部分对应的章群，直接开始阅读即可。
+而如果我们的抽样数量＞1，就可以参考简单随机抽样的方法通过试验统计网进行抽样。
+整群抽样流程细化如下： 由此可以发现，整群抽样相比简单随机抽样与等距抽样，多了一个建群步骤：从目录、序言（含译者序）、导言等找到对全书整体划分的说明，然后将章节归类为「章群」。
+需要注意的是，对全书进行整群抽样的前提，除了书中 已有的整体划分外，还可以自己为全书进行群章划分，比如：
+整群划分 说明 性别 如果一本书提及多位高手，可以按照性别进行章节分类 身份/角色 如果一本书提到多位高手，可以按身份的不同（比如作家、科学家、商人等）进行章节分类 国别 同上，按照不同国家进行章节分类 年龄 按照划分的年龄段进行章节分类 &amp;hellip; &amp;hellip; 这种做法的优点在于并非每次只阅读一个独立章节，而是一次性选取多个章节的合体阅读，这样将全书往全局理解又近一步 。当然，整群抽样也存在着一些缺陷，比如无法将抽取章节群与未抽中的章群之间建立关联思考。另外如果抽取的章节群内某一章节与其他章群的一个或多个章节存在特定关联，整群抽样就觉察不出这种外在关系。所以我们在实际操作中往往需要更加灵活的抽样策略或者将不同抽样策略进行叠加以获得更精准的权重。
+Changelog # 20230524 1.0
+20230525 1.1 增补图示
+Ref：
+《聪明的阅读者》</description>
     </item>
     
     <item>

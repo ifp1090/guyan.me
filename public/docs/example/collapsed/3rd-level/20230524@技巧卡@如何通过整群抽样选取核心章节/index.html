@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="如何通过整群抽样选取核心章节？ # 我们在前两篇抽样方法文章中分别提到两个书本抽样方法「简单随机抽样」和「等距抽样」，它们两种抽样方式都是从全书中只选择一些个别章节来判断权重。但很多书的作者在写书时就将章节进行了权重考量，
+比如一本书的安排是这样的：
+部分 章节 第一部分 1~2 第二部分 3 第三部分 4-10 第四部分 11-12 如果将上述四部分章节数量由多到少进行排序，会发现第三部分分配的章节最多。在这里我们做一个「章节数量多就是作者想更多介绍进而属于更权重章节的范畴」的假设，那么我们可能要优先阅读第三部分。但如果我们按照之前介绍的两种抽样方式，抽样结果可能会类似这样（随机）：
+简单随机抽样：3/7/11 等距抽样：1/5/9/13 这可能忽略了作者对章节进行整体归类的信号暗示，可能不容易抓住全书权重。
+如何解决？
+我们可以暂缓一次选择一个章节然后再汇总的抽样方法，而是一开始就选择一个「章群」抽样。
+整群抽样步骤如下：
+对全书章节进行整群分类 # 最基础的分类方法就是参考作者为全书章节的整体划分，比如《如何达成目标》一共有13章，但作者直接在目录中将其划分为「准备就绪、预备开始、行动起来」三个部分：
+又比如《人是如何学习的-II》全书一共10章，而在中文序中提到全书分成「文化的复杂影响、学习的类型与过程、知识与推理、学习动机、对学校学习的启示、学习技术、贯穿一生的学习」七大主题：
+《行为科学研究方法》在译者序中将全书16章分成五大部分：
+一旦我们通过这些信息获得了全书「章节群」的划分数量，就可以将其视为对整本书的整群抽样个数。
+使用简单随机抽样法抽取群章（部分/主题等） # 与「简单随机抽样」方式差不多，唯一区别在于我们通过简单随机抽样抽出来的是多个章节，而这时候我们只需要抽取其中1个群章即可，所以我们最终需要阅读的不是一个一个的章节，而是一个或多个章节群。
+需要注意的是 试验统计网不支持抽取数量为1的简单随机抽样，所以我们如果希望自己从选取的章节群中选取一个章节群进行阅读，只需要随机制定一个数字即可。比如《人是如何学习的-II》一共有7个主题，我们就在1~7中随机选择一个主题，然后根据该主题在目录中找到对应的章群；《如何达成目标》一书有3个部分，我们就从1~3中随机选择一部分，找到该部分对应的章群，直接开始阅读即可。
+而如果我们的抽样数量＞1，就可以参考简单随机抽样的方法通过试验统计网进行抽样。
+整群抽样流程细化如下： 由此可以发现，整群抽样相比简单随机抽样与等距抽样，多了一个建群步骤：从目录、序言（含译者序）、导言等找到对全书整体划分的说明，然后将章节归类为「章群」。
+需要注意的是，对全书进行整群抽样的前提，除了书中 已有的整体划分外，还可以自己为全书进行群章划分，比如：
+整群划分 说明 性别 如果一本书提及多位高手，可以按照性别进行章节分类 身份/角色 如果一本书提到多位高手，可以按身份的不同（比如作家、科学家、商人等）进行章节分类 国别 同上，按照不同国家进行章节分类 年龄 按照划分的年龄段进行章节分类 &hellip; &hellip; 这种做法的优点在于并非每次只阅读一个独立章节，而是一次性选取多个章节的合体阅读，这样将全书往全局理解又近一步 。当然，整群抽样也存在着一些缺陷，比如无法将抽取章节群与未抽中的章群之间建立关联思考。另外如果抽取的章节群内某一章节与其他章群的一个或多个章节存在特定关联，整群抽样就觉察不出这种外在关系。所以我们在实际操作中往往需要更加灵活的抽样策略或者将不同抽样策略进行叠加以获得更精准的权重。
+Changelog # 20230524 1.0
+20230525 1.1 增补图示
+Ref：
+《聪明的阅读者》">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="03.整群抽样" />
+<meta property="og:description" content="如何通过整群抽样选取核心章节？ # 我们在前两篇抽样方法文章中分别提到两个书本抽样方法「简单随机抽样」和「等距抽样」，它们两种抽样方式都是从全书中只选择一些个别章节来判断权重。但很多书的作者在写书时就将章节进行了权重考量，
+比如一本书的安排是这样的：
+部分 章节 第一部分 1~2 第二部分 3 第三部分 4-10 第四部分 11-12 如果将上述四部分章节数量由多到少进行排序，会发现第三部分分配的章节最多。在这里我们做一个「章节数量多就是作者想更多介绍进而属于更权重章节的范畴」的假设，那么我们可能要优先阅读第三部分。但如果我们按照之前介绍的两种抽样方式，抽样结果可能会类似这样（随机）：
+简单随机抽样：3/7/11 等距抽样：1/5/9/13 这可能忽略了作者对章节进行整体归类的信号暗示，可能不容易抓住全书权重。
+如何解决？
+我们可以暂缓一次选择一个章节然后再汇总的抽样方法，而是一开始就选择一个「章群」抽样。
+整群抽样步骤如下：
+对全书章节进行整群分类 # 最基础的分类方法就是参考作者为全书章节的整体划分，比如《如何达成目标》一共有13章，但作者直接在目录中将其划分为「准备就绪、预备开始、行动起来」三个部分：
+又比如《人是如何学习的-II》全书一共10章，而在中文序中提到全书分成「文化的复杂影响、学习的类型与过程、知识与推理、学习动机、对学校学习的启示、学习技术、贯穿一生的学习」七大主题：
+《行为科学研究方法》在译者序中将全书16章分成五大部分：
+一旦我们通过这些信息获得了全书「章节群」的划分数量，就可以将其视为对整本书的整群抽样个数。
+使用简单随机抽样法抽取群章（部分/主题等） # 与「简单随机抽样」方式差不多，唯一区别在于我们通过简单随机抽样抽出来的是多个章节，而这时候我们只需要抽取其中1个群章即可，所以我们最终需要阅读的不是一个一个的章节，而是一个或多个章节群。
+需要注意的是 试验统计网不支持抽取数量为1的简单随机抽样，所以我们如果希望自己从选取的章节群中选取一个章节群进行阅读，只需要随机制定一个数字即可。比如《人是如何学习的-II》一共有7个主题，我们就在1~7中随机选择一个主题，然后根据该主题在目录中找到对应的章群；《如何达成目标》一书有3个部分，我们就从1~3中随机选择一部分，找到该部分对应的章群，直接开始阅读即可。
+而如果我们的抽样数量＞1，就可以参考简单随机抽样的方法通过试验统计网进行抽样。
+整群抽样流程细化如下： 由此可以发现，整群抽样相比简单随机抽样与等距抽样，多了一个建群步骤：从目录、序言（含译者序）、导言等找到对全书整体划分的说明，然后将章节归类为「章群」。
+需要注意的是，对全书进行整群抽样的前提，除了书中 已有的整体划分外，还可以自己为全书进行群章划分，比如：
+整群划分 说明 性别 如果一本书提及多位高手，可以按照性别进行章节分类 身份/角色 如果一本书提到多位高手，可以按身份的不同（比如作家、科学家、商人等）进行章节分类 国别 同上，按照不同国家进行章节分类 年龄 按照划分的年龄段进行章节分类 &hellip; &hellip; 这种做法的优点在于并非每次只阅读一个独立章节，而是一次性选取多个章节的合体阅读，这样将全书往全局理解又近一步 。当然，整群抽样也存在着一些缺陷，比如无法将抽取章节群与未抽中的章群之间建立关联思考。另外如果抽取的章节群内某一章节与其他章群的一个或多个章节存在特定关联，整群抽样就觉察不出这种外在关系。所以我们在实际操作中往往需要更加灵活的抽样策略或者将不同抽样策略进行叠加以获得更精准的权重。
+Changelog # 20230524 1.0
+20230525 1.1 增补图示
+Ref：
+《聪明的阅读者》" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://example.com/docs/example/collapsed/3rd-level/20230524@%E6%8A%80%E5%B7%A7%E5%8D%A1@%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87%E6%95%B4%E7%BE%A4%E6%8A%BD%E6%A0%B7%E9%80%89%E5%8F%96%E6%A0%B8%E5%BF%83%E7%AB%A0%E8%8A%82/" /><meta property="article:section" content="docs" />
+
+
+<title>03.整群抽样 | GY‘s 1th BOOK</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.4f0117e74e5337280f18eb9641eae520cb4b25adcf5dd64fafad4664145a5957.css" integrity="sha256-TwEX505TNygPGOuWQerlIMtLJa3PXdZPr61GZBRaWVc=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.3358d9d443a2120555ca9c7cfd053fb9d2e76deee3793d9434cbc0c79060da2d.js" integrity="sha256-M1jZ1EOiEgVVypx8/QU/udLnbe7jeT2UNMvAx5Bg2i0=" crossorigin="anonymous"></script>
+
+  <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>GY‘s 1th BOOK</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <a href="/docs/example/" class="">Example Site</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/table-of-contents/" class="">Table of Contents</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/table-of-contents/with-toc/" class="">含目录</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/table-of-contents/without-toc/" class="">不含目录</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-4e46b01272d410b3a99461d79326ddf4" class="toggle" checked />
+    <label for="section-4e46b01272d410b3a99461d79326ddf4" class="flex justify-between">
+      <a role="button" class="">Collapsed</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/collapsed/3rd-level/" class="">3rd Level</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/collapsed/3rd-level/20230521@%E6%8A%80%E5%B7%A7%E5%8D%A1@%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87%E7%AE%80%E5%8D%95%E9%9A%8F%E6%9C%BA%E6%8A%BD%E6%A0%B7%E9%80%89%E5%8F%96%E6%A0%B8%E5%BF%83%E7%AB%A0%E8%8A%82/" class="">01.简单随机抽样</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/collapsed/3rd-level/20230522@%E6%8A%80%E5%B7%A7%E5%8D%A1@%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87%E7%AD%89%E8%B7%9D%E6%8A%BD%E6%A0%B7%E9%80%89%E5%8F%96%E6%A0%B8%E5%BF%83%E7%AB%A0%E8%8A%82/" class="">02.等距抽样</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/collapsed/3rd-level/20230524@%E6%8A%80%E5%B7%A7%E5%8D%A1@%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87%E6%95%B4%E7%BE%A4%E6%8A%BD%E6%A0%B7%E9%80%89%E5%8F%96%E6%A0%B8%E5%BF%83%E7%AB%A0%E8%8A%82/" class="active">03.整群抽样</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Shortcodes</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/shortcodes/columns/" class="">Columns</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/shortcodes/expand/" class="">Expand</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/shortcodes/hints/" class="">Hints</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-d3fc1bf6d66cd84b896a0af9f40cb1d5" class="toggle"  />
+    <label for="section-d3fc1bf6d66cd84b896a0af9f40cb1d5" class="flex justify-between">
+      <a href="/docs/shortcodes/section/" class="">Section</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/shortcodes/section/first-page/" class="">First Page</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/shortcodes/section/second-page/" class="">Second Page</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/shortcodes/tabs/" class="">Tabs</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="https://github.com/alex-shpak/hugo-book"  target="_blank" rel="noopener">
+        想说的话
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>03.整群抽样</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#如何通过整群抽样选取核心章节">如何通过整群抽样选取核心章节？</a>
+      <ul>
+        <li>
+          <ul>
+            <li></li>
+          </ul>
+        </li>
+        <li><a href="#changelog">Changelog</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="如何通过整群抽样选取核心章节">
+  如何通过整群抽样选取核心章节？
+  <a class="anchor" href="#%e5%a6%82%e4%bd%95%e9%80%9a%e8%bf%87%e6%95%b4%e7%be%a4%e6%8a%bd%e6%a0%b7%e9%80%89%e5%8f%96%e6%a0%b8%e5%bf%83%e7%ab%a0%e8%8a%82">#</a>
+</h1>
+<p>我们在前两篇抽样方法文章中分别提到两个书本抽样方法「简单随机抽样」和「等距抽样」，它们两种抽样方式都是从全书中只选择一些个别章节来判断权重。但很多书的作者在写书时就将章节进行了权重考量，</p>
+<p>比如一本书的安排是这样的：</p>
+<table>
+<thead>
+<tr>
+<th>部分</th>
+<th>章节</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>第一部分</td>
+<td>1~2</td>
+</tr>
+<tr>
+<td>第二部分</td>
+<td>3</td>
+</tr>
+<tr>
+<td>第三部分</td>
+<td>4-10</td>
+</tr>
+<tr>
+<td>第四部分</td>
+<td>11-12</td>
+</tr>
+</tbody>
+</table>
+<p>如果将上述四部分章节数量由多到少进行排序，会发现第三部分分配的章节最多。在这里我们做一个「章节数量多就是作者想更多介绍进而属于更权重章节的范畴」的假设，那么我们可能要优先阅读第三部分。但如果我们按照之前介绍的两种抽样方式，抽样结果可能会类似这样（随机）：</p>
+<ul>
+<li>简单随机抽样：3/7/11</li>
+<li>等距抽样：1/5/9/13</li>
+</ul>
+<p>这可能忽略了作者对章节进行整体归类的信号暗示，可能不容易抓住全书权重。</p>
+<p>如何解决？</p>
+<p>我们可以暂缓一次选择一个章节然后再汇总的抽样方法，而是一开始就选择一个「章群」抽样。</p>
+<p>整群抽样步骤如下：</p>
+<ol>
+<li>
+<h4 id="对全书章节进行整群分类">
+  对全书章节进行整群分类
+  <a class="anchor" href="#%e5%af%b9%e5%85%a8%e4%b9%a6%e7%ab%a0%e8%8a%82%e8%bf%9b%e8%a1%8c%e6%95%b4%e7%be%a4%e5%88%86%e7%b1%bb">#</a>
+</h4>
+<p>最基础的分类方法就是参考作者为全书章节的整体划分，比如《如何达成目标》一共有13章，但作者直接在目录中将其划分为「准备就绪、预备开始、行动起来」三个部分：</p>
+<p>
+  <img src="http://pbox.online/202305251044010.png" alt="image-20230525104441984" /></p>
+<p>又比如《人是如何学习的-II》全书一共10章，而在中文序中提到全书分成「文化的复杂影响、学习的类型与过程、知识与推理、学习动机、对学校学习的启示、学习技术、贯穿一生的学习」七大主题：</p>
+<p>
+  <img src="http://pbox.online/202305251045293.png" alt="image-20230525104529268" /></p>
+<p>《行为科学研究方法》在译者序中将全书16章分成五大部分：</p>
+<p>
+  <img src="http://pbox.online/202305251046424.png" alt="image-20230525104616399" /></p>
+<p>一旦我们通过这些信息获得了全书「章节群」的划分数量，就可以将其视为对整本书的整群抽样个数。</p>
+</li>
+<li>
+<h4 id="使用简单随机抽样法抽取群章部分主题等">
+  使用简单随机抽样法抽取群章（部分/主题等）
+  <a class="anchor" href="#%e4%bd%bf%e7%94%a8%e7%ae%80%e5%8d%95%e9%9a%8f%e6%9c%ba%e6%8a%bd%e6%a0%b7%e6%b3%95%e6%8a%bd%e5%8f%96%e7%be%a4%e7%ab%a0%e9%83%a8%e5%88%86%e4%b8%bb%e9%a2%98%e7%ad%89">#</a>
+</h4>
+<p>与「简单随机抽样」方式差不多，唯一区别在于我们通过简单随机抽样抽出来的是多个章节，而这时候我们只需要抽取其中1个群章即可，所以我们最终需要阅读的不是一个一个的章节，而是一个或多个章节群。</p>
+<p>需要注意的是
+  <a href="www.trialstats.com"><strong>试验统计网</strong></a>不支持抽取数量为1的简单随机抽样，所以我们如果希望自己从选取的章节群中选取一个章节群进行阅读，只需要随机制定一个数字即可。比如《人是如何学习的-II》一共有7个主题，我们就在1~7中随机选择一个主题，然后根据该主题在目录中找到对应的章群；《如何达成目标》一书有3个部分，我们就从1~3中随机选择一部分，找到该部分对应的章群，直接开始阅读即可。</p>
+<p>而如果我们的抽样数量＞1，就可以参考简单随机抽样的方法通过试验统计网进行抽样。</p>
+</li>
+</ol>
+<p>整群抽样流程细化如下：
+
+  <img src="http://pbox.online/202305251041669.png" alt="Snipaste_2023-05-25_09-59-42" /></p>
+<p>由此可以发现，整群抽样相比简单随机抽样与等距抽样，多了一个建群步骤：从目录、序言（含译者序）、导言等找到对全书整体划分的说明，然后将章节归类为「章群」。</p>
+<p>需要注意的是，对全书进行整群抽样的前提，除了书中 已有的整体划分外，还可以自己为全书进行群章划分，比如：</p>
+<table>
+<thead>
+<tr>
+<th>整群划分</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>性别</td>
+<td>如果一本书提及多位高手，可以按照性别进行章节分类</td>
+</tr>
+<tr>
+<td>身份/角色</td>
+<td>如果一本书提到多位高手，可以按身份的不同（比如作家、科学家、商人等）进行章节分类</td>
+</tr>
+<tr>
+<td>国别</td>
+<td>同上，按照不同国家进行章节分类</td>
+</tr>
+<tr>
+<td>年龄</td>
+<td>按照划分的年龄段进行章节分类</td>
+</tr>
+<tr>
+<td>&hellip;</td>
+<td>&hellip;</td>
+</tr>
+</tbody>
+</table>
+<p>这种做法的优点在于并非每次只阅读一个独立章节，而是一次性选取多个章节的合体阅读，这样将全书往全局理解又近一步 。当然，整群抽样也存在着一些缺陷，比如无法将抽取章节群与未抽中的章群之间建立关联思考。另外如果抽取的章节群内某一章节与其他章群的一个或多个章节存在特定关联，整群抽样就觉察不出这种外在关系。所以我们在实际操作中往往需要更加灵活的抽样策略或者将不同抽样策略进行叠加以获得更精准的权重。</p>
+<h2 id="changelog">
+  Changelog
+  <a class="anchor" href="#changelog">#</a>
+</h2>
+<p>20230524 1.0</p>
+<p>20230525 1.1 增补图示</p>
+<p>Ref：</p>
+<p>《聪明的阅读者》</p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#如何通过整群抽样选取核心章节">如何通过整群抽样选取核心章节？</a>
+      <ul>
+        <li>
+          <ul>
+            <li></li>
+          </ul>
+        </li>
+        <li><a href="#changelog">Changelog</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
