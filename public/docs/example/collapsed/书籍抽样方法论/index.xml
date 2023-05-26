@@ -7,10 +7,10 @@
     <generator>Hugo -- gohugo.io</generator><atom:link href="https://example.com/docs/example/collapsed/%E4%B9%A6%E7%B1%8D%E6%8A%BD%E6%A0%B7%E6%96%B9%E6%B3%95%E8%AE%BA/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>01.简单随机抽样</title>
-      <link>https://example.com/docs/example/collapsed/%E4%B9%A6%E7%B1%8D%E6%8A%BD%E6%A0%B7%E6%96%B9%E6%B3%95%E8%AE%BA/%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87%E7%AE%80%E5%8D%95%E9%9A%8F%E6%9C%BA%E6%8A%BD%E6%A0%B7%E9%80%89%E5%8F%96%E6%A0%B8%E5%BF%83%E7%AB%A0%E8%8A%82/</link>
+      <link>https://example.com/docs/example/collapsed/%E4%B9%A6%E7%B1%8D%E6%8A%BD%E6%A0%B7%E6%96%B9%E6%B3%95%E8%AE%BA/%E7%AE%80%E5%8D%95%E9%9A%8F%E6%9C%BA%E6%8A%BD%E6%A0%B7/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/docs/example/collapsed/%E4%B9%A6%E7%B1%8D%E6%8A%BD%E6%A0%B7%E6%96%B9%E6%B3%95%E8%AE%BA/%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87%E7%AE%80%E5%8D%95%E9%9A%8F%E6%9C%BA%E6%8A%BD%E6%A0%B7%E9%80%89%E5%8F%96%E6%A0%B8%E5%BF%83%E7%AB%A0%E8%8A%82/</guid>
+      <guid>https://example.com/docs/example/collapsed/%E4%B9%A6%E7%B1%8D%E6%8A%BD%E6%A0%B7%E6%96%B9%E6%B3%95%E8%AE%BA/%E7%AE%80%E5%8D%95%E9%9A%8F%E6%9C%BA%E6%8A%BD%E6%A0%B7/</guid>
       <description>如何通过简单随机抽样选取核心章节？ # 参考8020法则，一本书的核心权重是它占比的20%左右，根据不同书本平均每页的文字密度，可能会有1.1~1.6的系数差异（平均每页字数越多，系统相应会更大）。所以一本书的核心章节就可以按如下公式进行计算：
 核心章节 = 书本章节总数 × 20% × 系数（1.1~1.6）
 这里我们暂且将系数设为中位数1.3
@@ -33,10 +33,10 @@
     
     <item>
       <title>02.等距抽样</title>
-      <link>https://example.com/docs/example/collapsed/%E4%B9%A6%E7%B1%8D%E6%8A%BD%E6%A0%B7%E6%96%B9%E6%B3%95%E8%AE%BA/%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87%E7%AD%89%E8%B7%9D%E6%8A%BD%E6%A0%B7%E9%80%89%E5%8F%96%E6%A0%B8%E5%BF%83%E7%AB%A0%E8%8A%82/</link>
+      <link>https://example.com/docs/example/collapsed/%E4%B9%A6%E7%B1%8D%E6%8A%BD%E6%A0%B7%E6%96%B9%E6%B3%95%E8%AE%BA/%E7%AD%89%E8%B7%9D%E6%8A%BD%E6%A0%B7/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/docs/example/collapsed/%E4%B9%A6%E7%B1%8D%E6%8A%BD%E6%A0%B7%E6%96%B9%E6%B3%95%E8%AE%BA/%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87%E7%AD%89%E8%B7%9D%E6%8A%BD%E6%A0%B7%E9%80%89%E5%8F%96%E6%A0%B8%E5%BF%83%E7%AB%A0%E8%8A%82/</guid>
+      <guid>https://example.com/docs/example/collapsed/%E4%B9%A6%E7%B1%8D%E6%8A%BD%E6%A0%B7%E6%96%B9%E6%B3%95%E8%AE%BA/%E7%AD%89%E8%B7%9D%E6%8A%BD%E6%A0%B7/</guid>
       <description>如何通过等距抽样选取核心章节？ # 上篇文章中提到通过 简单随机抽样法 选取一本书的核心章节，我尝试通过试验统计网对《行为科学统计》这本书进行三次随机抽样，结果如下：
 随机抽样次数 抽样结果 第一次 4, 6, 9, 10, 14 第二次 1, 4, 6, 7, 8 第三次 1, 6, 7, 10, 12 参考上篇文章我们知道，《行为科学统计》全书一共19章，通过计算确定抽样5章，那如何进一步判断简单随机抽样的抽样合理性呢？一个简单的方法就是看抽样章节对全书篇幅的覆盖率。
 以第一次抽样的结果为例，我们如果想知道随机抽中的章节所未覆盖的章节数量的话，是这样的结果：
@@ -62,10 +62,10 @@ Ref：
     
     <item>
       <title>03.整群抽样</title>
-      <link>https://example.com/docs/example/collapsed/%E4%B9%A6%E7%B1%8D%E6%8A%BD%E6%A0%B7%E6%96%B9%E6%B3%95%E8%AE%BA/%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87%E6%95%B4%E7%BE%A4%E6%8A%BD%E6%A0%B7%E9%80%89%E5%8F%96%E6%A0%B8%E5%BF%83%E7%AB%A0%E7%BE%A4/</link>
+      <link>https://example.com/docs/example/collapsed/%E4%B9%A6%E7%B1%8D%E6%8A%BD%E6%A0%B7%E6%96%B9%E6%B3%95%E8%AE%BA/%E6%95%B4%E7%BE%A4%E6%8A%BD%E6%A0%B7/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/docs/example/collapsed/%E4%B9%A6%E7%B1%8D%E6%8A%BD%E6%A0%B7%E6%96%B9%E6%B3%95%E8%AE%BA/%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87%E6%95%B4%E7%BE%A4%E6%8A%BD%E6%A0%B7%E9%80%89%E5%8F%96%E6%A0%B8%E5%BF%83%E7%AB%A0%E7%BE%A4/</guid>
+      <guid>https://example.com/docs/example/collapsed/%E4%B9%A6%E7%B1%8D%E6%8A%BD%E6%A0%B7%E6%96%B9%E6%B3%95%E8%AE%BA/%E6%95%B4%E7%BE%A4%E6%8A%BD%E6%A0%B7/</guid>
       <description>如何通过整群抽样选取核心章群？ # 我们在前两篇抽样方法文章中分别提到两个书本抽样方法「简单随机抽样」和「等距抽样」，它们两种抽样方式都是从全书中只选择一些个别章节来判断权重。但很多书的作者在写书时就将章节进行了权重考量，
 比如一本书的安排是这样的：
 部分 章节 第一部分 1~2 第二部分 3 第三部分 4-10 第四部分 11-12 如果将上述四部分章节数量由多到少进行排序，会发现第三部分分配的章节最多。在这里我们做一个「章节数量多就是作者想更多介绍进而属于更权重章节的范畴」的假设，那么我们可能要优先阅读第三部分。但如果我们按照之前介绍的两种抽样方式，抽样结果可能会类似这样（随机）：
@@ -91,10 +91,10 @@ Ref：
     
     <item>
       <title>04.分层抽样</title>
-      <link>https://example.com/docs/example/collapsed/%E4%B9%A6%E7%B1%8D%E6%8A%BD%E6%A0%B7%E6%96%B9%E6%B3%95%E8%AE%BA/%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87%E5%88%86%E5%B1%82%E6%8A%BD%E6%A0%B7%E9%80%89%E5%8F%96%E6%A0%B8%E5%BF%83%E7%AB%A0%E8%8A%82/</link>
+      <link>https://example.com/docs/example/collapsed/%E4%B9%A6%E7%B1%8D%E6%8A%BD%E6%A0%B7%E6%96%B9%E6%B3%95%E8%AE%BA/%E5%88%86%E5%B1%82%E6%8A%BD%E6%A0%B7/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/docs/example/collapsed/%E4%B9%A6%E7%B1%8D%E6%8A%BD%E6%A0%B7%E6%96%B9%E6%B3%95%E8%AE%BA/%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87%E5%88%86%E5%B1%82%E6%8A%BD%E6%A0%B7%E9%80%89%E5%8F%96%E6%A0%B8%E5%BF%83%E7%AB%A0%E8%8A%82/</guid>
+      <guid>https://example.com/docs/example/collapsed/%E4%B9%A6%E7%B1%8D%E6%8A%BD%E6%A0%B7%E6%96%B9%E6%B3%95%E8%AE%BA/%E5%88%86%E5%B1%82%E6%8A%BD%E6%A0%B7/</guid>
       <description>如何通过分层抽样选取核心章节？ # 在前面提到了通过 整群抽样 方法抽取一本书的核心章群，通过一次性选取一个或多个「章节群」来形成章节集合的大样本开始阅读。这种方法的好处在于能够最大程度挖掘抽中章群的内容，强调对章节群的纵向理解深度。但这种方法带来的一个偏差在于，由于整群抽样偏纵向，因此无法对全书内容进行横向的抽样覆盖。解决这个问题的方法之一就是分层抽样。
 什么是阅读的分层抽样？ # 就是当我们拿到一本书后，我们首先确认这本书中包含的不同特征（比如性别、身份、参考文献引用、人名等）将整本书分成具有各自特征的章群，分类的结果是每一章都各自从属于各自的特征群。然后借助简单随机抽样方法对这些特征章群进行章节抽样，最后抽取了具有不同特征章群的章节组成一个「小集合」进行文本细读。
 分层抽样的步骤 # 1.确认全书的差异化分层标准 # 在《聪明的阅读者》一书中，阳老师介绍了两种分层方法：
