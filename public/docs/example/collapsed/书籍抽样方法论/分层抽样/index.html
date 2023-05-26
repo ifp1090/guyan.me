@@ -36,7 +36,7 @@
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.4f0117e74e5337280f18eb9641eae520cb4b25adcf5dd64fafad4664145a5957.css" integrity="sha256-TwEX505TNygPGOuWQerlIMtLJa3PXdZPr61GZBRaWVc=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/en.search.min.4ba472897d7c82c5bec4509aa15aff2b2eafaa4c51578aaf33b08b00918e690d.js" integrity="sha256-S6RyiX18gsW&#43;xFCaoVr/Ky6vqkxRV4qvM7CLAJGOaQ0=" crossorigin="anonymous"></script>
+  <script defer src="/en.search.min.26e1da8efae0c038080e093d204df3c6bb9188104dfa9c2ff4b674dd48261d2a.js" integrity="sha256-JuHajvrgwDgIDgk9IE3zxruRiBBN&#43;pwv9LZ03UgmHSo=" crossorigin="anonymous"></script>
 
   <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
 <!--
@@ -216,6 +216,19 @@ https://github.com/alex-shpak/hugo-book
 
   
     <a href="/docs/example/collapsed/%E4%B9%A6%E7%B1%8D%E6%8A%BD%E6%A0%B7%E6%96%B9%E6%B3%95%E8%AE%BA/%E5%88%86%E5%B1%82%E6%8A%BD%E6%A0%B7/" class="active">04.分层抽样</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/collapsed/%E4%B9%A6%E7%B1%8D%E6%8A%BD%E6%A0%B7%E6%96%B9%E6%B3%95%E8%AE%BA/%E4%BE%BF%E5%88%A9%E6%8A%BD%E6%A0%B7/" class="">便利抽样</a>
   
 
         </li>
@@ -613,19 +626,24 @@ https://github.com/alex-shpak/hugo-book
   分层章节抽样与整群章节抽样的差异
   <a class="anchor" href="#%e5%88%86%e5%b1%82%e7%ab%a0%e8%8a%82%e6%8a%bd%e6%a0%b7%e4%b8%8e%e6%95%b4%e7%be%a4%e7%ab%a0%e8%8a%82%e6%8a%bd%e6%a0%b7%e7%9a%84%e5%b7%ae%e5%bc%82">#</a>
 </h2>
-<p>如果看过 <strong>整群章节抽样</strong> 的介绍，会发现分层章节抽样与整群章节抽样都有将章节组成「章群」的步骤，所以它们看起来可能比较相似，但细致分析依然有两个明显差异：</p>
+<p>通过上面的分析我们发现，相比简单随机抽样，分层抽样既关注整体（全书分层）又注重局部（每层抽样），所以它相对来说抽取的章节更具多样性，确保了样章的差异化，从而有助于更好的理解全书的内容。如果看过上篇 <strong>整群章节抽样</strong> 的介绍，会发现分层章节抽样与整群章节抽样都有将章节组成「章群」的步骤，所以它们看起来可能比较相似，但细致分析依然有两个明显差异：</p>
 <ol>
-<li>整群章节抽样抽样的前提相对容易获取，比如基于书本目录、导言、自序、他序、后记等信息就能相对轻松获取整本书的大体结构以此进行章群分类；而分层章节抽样难度稍高，需要从更多维度对整本书的章节进行分类组合。</li>
-<li>整群抽样获得章群的章节彼此的特征不太一致，各章节只是居于笼统的方向或主题关联在一起；而分层章节抽样创建的章节群章节有明显的共同特征。整群章节抽样后需要对整个章群进行增细阅读；而分层抽样的目标是获取差异化属性的各个章节群，然后再从各章节群中抽样出少量代表该章群样本的章节，最终逐个汇总起来文本细读。</li>
+<li>
+<p>整群章节抽样抽样的前提相对容易获取，比如基于书本目录、导言、自序、他序、后记等信息就能相对轻松获取整本书的大体结构以此进行章群分类；而分层章节对读者的抽样能力要求稍高，当读者无法科学合理地对全书的层级进行分类，最终可能导致随机抽样的章节并不能有效增强对全书的理解；此外如果设定的分层标准导致某些章节既属于A层级又属于B层级时，就会造成抽样偏差。所以相比较其他抽样方法，分层抽样需要更多的尝试与练习，或者从更多维度对整本书的章节进行分类组合。</p>
+</li>
+<li>
+<p>整群抽样获得章群的章节彼此的特征不太一致，各章节只是居于笼统的方向或主题关联在一起；而分层章节抽样创建的章节群章节有明显的共同特征。整群章节抽样后需要对整个章群进行增细阅读；而分层抽样的目标是获取差异化属性的各个章节群，然后再从各章节群中抽样出少量代表该章群样本的章节，最终逐个汇总起来文本细读。</p>
+</li>
 </ol>
 <p>分层章节抽样与整群章节抽样差异如下图示简化：</p>
 <p>
-  <img src="https://pbox.online/202305261039506.png" alt="image-20230526103906475" /></p>
+  <img src="https://pbox.online/202305261731787.png" alt="image-20230526173147741" /></p>
 <h2 id="changelog">
   Changelog
   <a class="anchor" href="#changelog">#</a>
 </h2>
 <p>20230525 1.0</p>
+<p>20230526 1.1 改进图示，增强分层抽样与整群抽样的区别描述</p>
 <p>Ref：</p>
 <p>《聪明的阅读者》</p>
 <p>
@@ -638,6 +656,8 @@ https://github.com/alex-shpak/hugo-book
   <a href="https://www.scribbr.com/methodology/stratified-sampling/">Scribbr-Stratified Sampling</a></p>
 <p>
   <a href="https://www.voxco.com/blog/stratified-sampling-vs-cluster-sampling/">Voxco-Stratified Sampling vs Cluster Sampling</a></p>
+<p>
+  <a href="https://www.investopedia.com/ask/answers/041615/what-are-advantages-and-disadvantages-stratified-random-sampling.asp">Investopedia-Stratified Random Sampling</a></p>
 </article>
  
       
