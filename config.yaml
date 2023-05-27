@@ -1,7 +1,7 @@
 # hugo server --minify --themesDir ... --baseURL=http://0.0.0.0:1313/theme/hugo-book/
 
 baseURL: https://example.com/
-title: GY‘s 1th BOOK
+title: Gu Yan's 1st Book
 theme: hugo-book
 
 # Book configuration
@@ -28,7 +28,7 @@ languages:
 
 menu:
   # before: []
-  after:
+  # after:
     - name: "想说的话"
       url: "https://github.com/alex-shpak/hugo-book"
       weight: 10

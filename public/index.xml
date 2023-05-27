@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Introduction on GY‘s 1th BOOK</title>
+    <title>Introduction on Gu Yan&#39;s 1st Book</title>
     <link>https://example.com/</link>
-    <description>Recent content in Introduction on GY‘s 1th BOOK</description>
+    <description>Recent content in Introduction on Gu Yan&#39;s 1st Book</description>
     <generator>Hugo -- gohugo.io</generator><atom:link href="https://example.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>01.简单随机抽样</title>
@@ -15,7 +15,7 @@
 核心章节 = 书本章节总数 × 20% × 系数（1.1~1.6）
 这里我们暂且将系数设为中位数1.3
 对于简单随机抽样，就是指对于一本书不进行任何解析判断，直接随机对核心章节进行取样。
-这里以统计网站 www.trialstats.com 对《行为科学统计》进行随机抽样示范。
+这里以 统计网站 对《行为科学统计》进行随机抽样示范。
 1.核心章节计算 # 比如我们要读《行为科学统计》这本书，而这本书一共有19章：
 如果要以随机抽样的方式阅读这本书，我们可以将前面的公式代入：
 《行为科学统计》核心章节 = 书本章节总数(19) × 20% × 中位系数（1.3）= 4.94 ≈ 5
@@ -29,16 +29,6 @@
 简单随机抽样一般适合阅读起步阶段，比如我们对一本书没有掌握更好的权重章节识别方法，所以就利用简单随机抽样的方式来抽取这本书的章节进行阅读。这种方式能够更快让自己启动一本书的阅读进程，不至于一直陷入阅读困境。 因为是抽样结果具有随机性，所以上图的值如果第二次操作，可能会出现不同值。 如果学会了更多高阶阅读抽样方法，可以降低这种方法的使用权重。 Ref：
 《聪明的阅读者》
 20230521</description>
-    </item>
-    
-    <item>
-      <title>含目录</title>
-      <link>https://example.com/docs/example/table-of-contents/with-toc/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://example.com/docs/example/table-of-contents/with-toc/</guid>
-      <description>Caput vino delphine in tamen vias # Cognita laeva illo fracta # Lorem markdownum pavent auras, surgit nunc cingentibus libet Laomedonque que est. Pastor An arbor filia foedat, ne fugit aliter, per. Helicona illas et callida neptem est Oresitrophos caput, dentibus est venit. Tenet reddite famuli praesentem fortibus, quaeque vis foret si frondes gelidos gravidae circumtulit inpulit armenta nativum.
-Te at cruciabere vides rubentis manebo Maturuit in praetemptat ruborem ignara postquam habitasse Subitarum supplevit quoque fontesque venabula spretis modo Montis tot est mali quasque gravis Quinquennem domus arsit ipse Pellem turis pugnabant locavit Natus quaerere # Pectora et sine mulcere, coniuge dum tincta incurvae.</description>
     </item>
     
     <item>
@@ -71,16 +61,6 @@ Ref：
     </item>
     
     <item>
-      <title>不含目录</title>
-      <link>https://example.com/docs/example/table-of-contents/without-toc/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://example.com/docs/example/table-of-contents/without-toc/</guid>
-      <description>At me ipso nepotibus nunc celebratior genus # Tanto oblite # Lorem markdownum pectora novis patenti igne sua opus aurae feras materiaque illic demersit imago et aristas questaque posset. Vomit quoque suo inhaesuro clara. Esse cumque, per referri triste. Ut exponit solisque communis in tendens vincetis agisque iamque huic bene ante vetat omina Thebae rates. Aeacus servat admonitu concidit, ad resimas vultus et rugas vultu dignamque Siphnon.
-Quam iugulum regia simulacra, plus meruit humo pecorumque haesit, ab discedunt dixit: ritu pharetramque.</description>
-    </item>
-    
-    <item>
       <title>03.整群抽样</title>
       <link>https://example.com/docs/example/collapsed/%E4%B9%A6%E7%B1%8D%E6%8A%BD%E6%A0%B7%E6%96%B9%E6%B3%95%E8%AE%BA/%E6%95%B4%E7%BE%A4%E6%8A%BD%E6%A0%B7/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -101,7 +81,8 @@ Quam iugulum regia simulacra, plus meruit humo pecorumque haesit, ab discedunt d
 需要注意的是 试验统计网不支持抽取数量为1的简单随机抽样，所以我们如果希望自己从选取的章节群中选取一个章节群进行阅读，只需要随机制定一个数字即可。比如《人是如何学习的-II》一共有7个主题，我们就在1~7中随机选择一个主题，然后根据该主题在目录中找到对应的章群；《如何达成目标》一书有3个部分，我们就从1~3中随机选择一部分，找到该部分对应的章群，直接开始阅读即可。
 而如果我们的抽样数量＞1，就可以参考简单随机抽样的方法通过试验统计网进行抽样。
 3.对抽取的章群启动文本细读流程 # 这本书参考「文本细读方法论」，不再展开。
-整群抽样图示 # 整群章节抽样流程细化如下： 整群抽样的优缺点 # 由此可以发现，整群抽样相比简单随机抽样与等距抽样，有三个明显优点：
+整群抽样图示 # 整群章节抽样流程细化如下：
+整群抽样的优缺点 # 由此可以发现，整群抽样相比简单随机抽样与等距抽样，有三个明显优点：
 整群抽样抽取的一般是多个章节组成的大样本，而非彼此独立的小章节，所以大幅度降低了章节抽样的时间与精力成本。 整群章节抽样大都基于书中目录、序言、导言、后记等给到相对明显的提示对全书进行结构划分（还可通过性别、身份、角色、区域、年龄等维度），所以整群的建立速度相对迅速。 一旦建立了章群的结构，就能马上对章群展开文本细读工作，相对传统从头看到尾的阅读习惯，整群抽样后更强调对文本阅读的深度理解，容易对章群形成更深入的认知。 当然，整群抽样也存在着一些缺陷，比如一旦整群划分标准设定完毕开始抽样后，就忽略了其他未抽中章群可能包含的差异化信息，比如如果抽取的章节群内某一章节与其他章群的一个或多个章节存在特定关联，而整群抽样就觉察不出这种外在关系。在这种状况下，提高整群抽样的数量可能是一个可以尝试的方案，但也带来了更多增细阅读的成本。此外，如果整群抽样前发现书中未能有关于全书结构的分类信息，而且也较难对全书进行结构化分类，这就带来了整群抽样的难度，比如可能需要引入后续「分层章节抽样」的策略，或者将不同抽样策略进行叠加以获得更精准的权重。
 Changelog # 20230524 1.0
 20230525 1.1 增补图示
@@ -120,13 +101,15 @@ Ref：
 什么是阅读的分层抽样？ # 就是当我们拿到一本书后，我们首先确认这本书中包含的不同特征（比如性别、身份、参考文献引用、人名等）将整本书分成具有各自特征的章群，分类的结果是每一章都各自从属于各自的特征群。然后借助简单随机抽样方法对这些特征章群进行章节抽样，最后抽取了具有不同特征章群的章节组成一个「小集合」进行文本细读。
 分层抽样的步骤 # 1.确认全书的差异化分层标准 # 在《聪明的阅读者》一书中，阳老师介绍了两种分层方法：
 分层方法 描述 身份/角色 对于书中出现不同身份的人物进行分类汇总 核心章节 将反映全书核心章节的标准进行分类汇总 当然除此之外，还可以采用篇幅占比、论文引用等。
-分层方法 描述 篇幅占比 对书中章节所占全书、部分的篇幅进行分类汇总 论文引用 对书中作者高引论文的相关章节进行分类汇总 关键词 通过词频分析等梳理的关键词对章节分类汇总 2.将章节划分到不同标准层 # 将全书的章节按照确认的标准，分配到每个标准层中。这里需要注意的是每个标准层都是互斥关系，它们之间没有重叠，但包含了整本书的内容。
+分层方法 描述 篇幅占比 对书中章节所占全书、部分的篇幅进行分类汇总 论文引用 对书中作者高引论文的相关章节进行分类汇总 关键词 通过词频分析等梳理的关键词对章节分类汇总 主题 对全书章节涉及到的主题进行分类汇总 比如我现在拿到一本书《人性实验》，通过标题与目录发现全书一共有28个章节，每个章节描述一个与社会心理学相关的研究。
+针对这本书应该如何进行分层？
+比如我们可以用时间来划分，因为全书章节默认以研究论文发表时间排序，所以我们可以尝试比如以时代背景排序：195x~196x、197x~198x、199x~200x以及201x~。
+我们还可以根据社会心理学所涉及到的领域来划分，当我们找到主流的社会心理学教材，分析目录后发现社会心理学一般可以分成如下几个层面：
+主题 描述 社会认知 如何我们理解、解释、记忆和使用关于社会世界的信息 社会影响 如何人们被他人的行为、态度、信念和存在所影响 人际关系 人们在人际互动中的行为和情感，例如吸引力、友谊、爱情等 群体行为和社会身份 我们在群体或社区中的行为以及我们如何理解和应对我们的社会身份 偏见和刻板印象 我们对特定群体的固有认知和情绪偏见，以及如何形成和影响这些偏见 这就相当于获得了社会心理学所涵盖的5个主题，这五个主题就相当于找到了阅读社会心理学书籍的「抽样层」。
+2.将章节划分到不同标准层 # 将全书的章节按照确认的标准，分配到每个标准层中。这里需要注意的是每个标准层都是互斥关系，它们之间没有重叠，但包含了整本书的内容。
 操作方法如下「示例」：
 分层方法 描述 示例 身份/角色 对于书中出现不同身份的人物进行分类汇总 身份A:123；身份B:456 核心章节 将反映全书核心章节的标准进行分类汇总 引用自己文献:123；引用别人文献:456 当然除此之外，还可以采用篇幅占比、论文引用等。
-分层方法 描述 示例 篇幅占比 对书中章节所占全书、部分的篇幅进行分类汇总 全书篇幅TOP3:123；主题TOP3:456 论文引用 对书中作者高引论文的相关章节进行分类汇总 高引论文A:123；高引论文B：456 关键词 通过词频分析等梳理的关键词对章节分类汇总 关键词A:123；关键词B：456 3.确认每个标准层的样本量 # 一旦我们将全书所有章节进行了标准层分类，就可以进入抽样环节。如果分层后每层的章节数量差不多，就可以直接设定抽样比，比如7章中抽取2章；如果每层包含的章节数量不一致（甚至差异更大），就可以采取非比例抽样，比如对于某些包含章节数量更多的层级赋予更多的抽样数量。
-以《如何达成目标》为例，这本书默认将全书分层了三个部分：
-这本书包含的章节数量如下：
-序号 主题 章节数量 1 准备就绪 2 2 预备开始 5 3 行动起来 6 如果我们对这三个主题采用相同的抽样比例（比如都抽取1章）那么对于后两个部分的权重抽取可能会产生偏差，这时候我们就需要主动提高对后两个部分的抽样比（比如各抽取2章）。</description>
+分层方法 描述 示例 篇幅占比 对书中章节所占全书、部分的篇幅进行分类汇总 全书篇幅TOP3:123；主题TOP3:456 论文引用 对书中作者高引论文的相关章节进行分类汇总 高引论文A:123；高引论文B：456 关键词 通过词频分析等梳理的关键词对章节分类汇总 关键词A:123；关键词B：456 依然以《人性实验》为例，按照实验年代排序如下：</description>
     </item>
     
     <item>
