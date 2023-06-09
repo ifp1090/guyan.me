@@ -4,7 +4,7 @@
   <url>
     <loc>https://example.com/docs/example/ch5/%E4%B9%A6%E7%B1%8D%E6%8A%BD%E6%A0%B7%E6%96%B9%E6%B3%95%E8%AE%BA/%E7%AE%80%E5%8D%95%E9%9A%8F%E6%9C%BA%E6%8A%BD%E6%A0%B7/</loc>
   </url><url>
-    <loc>https://example.com/docs/example/ch6/%E7%BB%93%E6%9E%84%E9%98%85%E8%AF%BB%E6%96%B9%E6%B3%95%E8%AE%BA/%E7%AE%80%E5%8D%95%E9%9A%8F%E6%9C%BA%E6%8A%BD%E6%A0%B7/</loc>
+    <loc>https://example.com/docs/example/ch6/%E7%BB%93%E6%9E%84%E9%98%85%E8%AF%BB%E6%96%B9%E6%B3%95%E8%AE%BA/%E4%BA%86%E8%A7%A3%E8%AE%A4%E7%9F%A5%E6%96%B9%E5%BC%8F/</loc>
   </url><url>
     <loc>https://example.com/docs/example/</loc>
   </url><url>
@@ -12,11 +12,13 @@
   </url><url>
     <loc>https://example.com/docs/example/ch6/%E7%BB%93%E6%9E%84%E9%98%85%E8%AF%BB%E6%96%B9%E6%B3%95%E8%AE%BA/%E9%98%85%E8%AF%BB%E5%9B%9B%E9%97%AE/</loc>
   </url><url>
+    <loc>https://example.com/docs/example/ch6/%E7%BB%93%E6%9E%84%E9%98%85%E8%AF%BB%E6%96%B9%E6%B3%95%E8%AE%BA/%E5%A2%9E%E7%BB%86%E8%AE%A4%E7%9F%A5/</loc>
+  </url><url>
     <loc>https://example.com/docs/example/ch5/%E4%B9%A6%E7%B1%8D%E6%8A%BD%E6%A0%B7%E6%96%B9%E6%B3%95%E8%AE%BA/%E6%95%B4%E7%BE%A4%E6%8A%BD%E6%A0%B7/</loc>
   </url><url>
-    <loc>https://example.com/docs/example/ch6/%E7%BB%93%E6%9E%84%E9%98%85%E8%AF%BB%E6%96%B9%E6%B3%95%E8%AE%BA/%E6%95%B4%E7%BE%A4%E6%8A%BD%E6%A0%B7/</loc>
-  </url><url>
     <loc>https://example.com/docs/example/ch5/%E4%B9%A6%E7%B1%8D%E6%8A%BD%E6%A0%B7%E6%96%B9%E6%B3%95%E8%AE%BA/%E5%88%86%E5%B1%82%E6%8A%BD%E6%A0%B7/</loc>
+  </url><url>
+    <loc>https://example.com/docs/example/ch6/%E7%BB%93%E6%9E%84%E9%98%85%E8%AF%BB%E6%96%B9%E6%B3%95%E8%AE%BA/%E7%A0%94%E7%A9%B6%E6%96%B9%E6%B3%95%E8%AE%BA/</loc>
   </url><url>
     <loc>https://example.com/docs/example/ch5/%E4%B9%A6%E7%B1%8D%E6%8A%BD%E6%A0%B7%E6%96%B9%E6%B3%95%E8%AE%BA/%E4%BE%BF%E5%88%A9%E6%8A%BD%E6%A0%B7/</loc>
   </url><url>
