@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="概率抽样阅读与非概率抽样阅读的综合理解 # 我们在概率抽样阅读中提到了简单随机抽样阅读、等距抽样阅读、整群抽样阅读、分层抽样阅读，他们都强调章节选择的随机性。概率抽样阅读旨在以客观角度引入随机化选择消除人为偏见，所以它体现了书本所有章节都有被选择到的公平机会。简单来说，非概率抽样的主要决定因素是「工具」。
+概率抽样阅读简化图示 # 选择概率抽样阅读的前提 # 阅读者希望最大程度减少对全书的抽样偏差，规避人为抽样的样章导致对全书代表性过高或代表性不足的风险。 当一本书包含的主题、叙事、人物、情节等非常多样化时，使用概率抽样能够最大幅度增加代表全书的样本章节。 而诸如便利抽样阅读、专家抽样阅读、配额抽样阅读和雪球抽样阅读等非概率抽样方法，就致力于更深入的阅读全书的某一些模块，它不考虑全书所有的章节都可能被选取的机会，反而更依赖阅读者本人选择样本。比如阅读者在阅读之前已经设定的相对明确的阅读目标、阅读者已有的知识和经验、阅读者的主观判断、阅读者当前拥有的时空情境、人际、情绪等阅读条件的便利性等。简单来说，非概率抽样的主要决定因素是「人」。
+非概率抽样阅读简化图示 # 选择非概率抽样阅读的前提 # 因为非概率章节抽样不考虑整本书的所有章节，所以在下述情形更可能采取非概率抽样方法：
+阅读者在阅读之前已经明确希望对某些章节进行阅读而不希望对全书展开理解。 阅读者希望对书中某一个章节做一些试探性的阅读，看看能不能激活自己的阅读兴趣。 阅读者当前所拥有的抽样条件相当有限，不希望自己花太多时间精力就能快速找到章节。 概率抽样阅读与非概率抽样阅读的整体区别 # 要点 概率抽样阅读 非概率抽样阅读 抽取的样章对全书代表的程度 ↓ ↑ 抽样过程中对阅读者已有知识或经验的依赖程度 ↓ ↑ 抽样过程中对计算机（随机生成数据）的依赖程度 ↑ ↓ 抽样过程中对阅读者当前拥有的时空/人际/情绪等情境的依赖程度 ↓ ↑ 整体抽样的时间心力成本消耗程度 ↑ ↓ Changelog # 20230601 22:03 1.0
+20230602 18:12 1.1 增加概率抽样与非概率抽样图示的简化理解图
+Ref
+《聪明的阅读者》">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="09.综合理解" />
+<meta property="og:description" content="概率抽样阅读与非概率抽样阅读的综合理解 # 我们在概率抽样阅读中提到了简单随机抽样阅读、等距抽样阅读、整群抽样阅读、分层抽样阅读，他们都强调章节选择的随机性。概率抽样阅读旨在以客观角度引入随机化选择消除人为偏见，所以它体现了书本所有章节都有被选择到的公平机会。简单来说，非概率抽样的主要决定因素是「工具」。
+概率抽样阅读简化图示 # 选择概率抽样阅读的前提 # 阅读者希望最大程度减少对全书的抽样偏差，规避人为抽样的样章导致对全书代表性过高或代表性不足的风险。 当一本书包含的主题、叙事、人物、情节等非常多样化时，使用概率抽样能够最大幅度增加代表全书的样本章节。 而诸如便利抽样阅读、专家抽样阅读、配额抽样阅读和雪球抽样阅读等非概率抽样方法，就致力于更深入的阅读全书的某一些模块，它不考虑全书所有的章节都可能被选取的机会，反而更依赖阅读者本人选择样本。比如阅读者在阅读之前已经设定的相对明确的阅读目标、阅读者已有的知识和经验、阅读者的主观判断、阅读者当前拥有的时空情境、人际、情绪等阅读条件的便利性等。简单来说，非概率抽样的主要决定因素是「人」。
+非概率抽样阅读简化图示 # 选择非概率抽样阅读的前提 # 因为非概率章节抽样不考虑整本书的所有章节，所以在下述情形更可能采取非概率抽样方法：
+阅读者在阅读之前已经明确希望对某些章节进行阅读而不希望对全书展开理解。 阅读者希望对书中某一个章节做一些试探性的阅读，看看能不能激活自己的阅读兴趣。 阅读者当前所拥有的抽样条件相当有限，不希望自己花太多时间精力就能快速找到章节。 概率抽样阅读与非概率抽样阅读的整体区别 # 要点 概率抽样阅读 非概率抽样阅读 抽取的样章对全书代表的程度 ↓ ↑ 抽样过程中对阅读者已有知识或经验的依赖程度 ↓ ↑ 抽样过程中对计算机（随机生成数据）的依赖程度 ↑ ↓ 抽样过程中对阅读者当前拥有的时空/人际/情绪等情境的依赖程度 ↓ ↑ 整体抽样的时间心力成本消耗程度 ↑ ↓ Changelog # 20230601 22:03 1.0
+20230602 18:12 1.1 增加概率抽样与非概率抽样图示的简化理解图
+Ref
+《聪明的阅读者》" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://example.com/docs/example/ch5/%E4%B9%A6%E7%B1%8D%E6%8A%BD%E6%A0%B7%E6%96%B9%E6%B3%95%E8%AE%BA/%E7%BB%BC%E5%90%88%E7%90%86%E8%A7%A3/" /><meta property="article:section" content="docs" />
+
+
+<title>09.综合理解 | Gu Yan&#39;s 1st Book</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.4f0117e74e5337280f18eb9641eae520cb4b25adcf5dd64fafad4664145a5957.css" integrity="sha256-TwEX505TNygPGOuWQerlIMtLJa3PXdZPr61GZBRaWVc=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.3f9b2964ad484a7f28da1f241feaef51d829b7ebb63412c06efa209cf410a742.js" integrity="sha256-P5spZK1ISn8o2h8kH&#43;rvUdgpt&#43;u2NBLAbvognPQQp0I=" crossorigin="anonymous"></script>
+
+  <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Gu Yan&#39;s 1st Book</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <a href="/docs/example/" class="">阅读方法</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-b4f783ac35c6ebf0a727d442f9a1149d" class="toggle" checked />
+    <label for="section-b4f783ac35c6ebf0a727d442f9a1149d" class="flex justify-between">
+      <a href="/docs/example/ch5/" class="">第五章</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/ch5/%E4%B9%A6%E7%B1%8D%E6%8A%BD%E6%A0%B7%E6%96%B9%E6%B3%95%E8%AE%BA/" class="">书籍抽样方法论</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/ch5/%E4%B9%A6%E7%B1%8D%E6%8A%BD%E6%A0%B7%E6%96%B9%E6%B3%95%E8%AE%BA/%E7%AE%80%E5%8D%95%E9%9A%8F%E6%9C%BA%E6%8A%BD%E6%A0%B7/" class="">01.简单随机抽样</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/ch5/%E4%B9%A6%E7%B1%8D%E6%8A%BD%E6%A0%B7%E6%96%B9%E6%B3%95%E8%AE%BA/%E7%AD%89%E8%B7%9D%E6%8A%BD%E6%A0%B7/" class="">02.等距抽样</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/ch5/%E4%B9%A6%E7%B1%8D%E6%8A%BD%E6%A0%B7%E6%96%B9%E6%B3%95%E8%AE%BA/%E6%95%B4%E7%BE%A4%E6%8A%BD%E6%A0%B7/" class="">03.整群抽样</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/ch5/%E4%B9%A6%E7%B1%8D%E6%8A%BD%E6%A0%B7%E6%96%B9%E6%B3%95%E8%AE%BA/%E5%88%86%E5%B1%82%E6%8A%BD%E6%A0%B7/" class="">04.分层抽样</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/ch5/%E4%B9%A6%E7%B1%8D%E6%8A%BD%E6%A0%B7%E6%96%B9%E6%B3%95%E8%AE%BA/%E4%BE%BF%E5%88%A9%E6%8A%BD%E6%A0%B7/" class="">05.便利抽样</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/ch5/%E4%B9%A6%E7%B1%8D%E6%8A%BD%E6%A0%B7%E6%96%B9%E6%B3%95%E8%AE%BA/%E4%B8%93%E5%AE%B6%E6%8A%BD%E6%A0%B7/" class="">06.专家抽样</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/ch5/%E4%B9%A6%E7%B1%8D%E6%8A%BD%E6%A0%B7%E6%96%B9%E6%B3%95%E8%AE%BA/%E9%85%8D%E9%A2%9D%E6%8A%BD%E6%A0%B7/" class="">07.配额抽样</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/ch5/%E4%B9%A6%E7%B1%8D%E6%8A%BD%E6%A0%B7%E6%96%B9%E6%B3%95%E8%AE%BA/%E9%9B%AA%E7%90%83%E6%8A%BD%E6%A0%B7/" class="">08.雪球抽样</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/ch5/%E4%B9%A6%E7%B1%8D%E6%8A%BD%E6%A0%B7%E6%96%B9%E6%B3%95%E8%AE%BA/%E7%BB%BC%E5%90%88%E7%90%86%E8%A7%A3/" class="active">09.综合理解</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/ch6/" class="">第六章</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/ch6/%E7%BB%93%E6%9E%84%E9%98%85%E8%AF%BB%E6%96%B9%E6%B3%95%E8%AE%BA/" class="">结构阅读方法论</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/ch6/%E7%BB%93%E6%9E%84%E9%98%85%E8%AF%BB%E6%96%B9%E6%B3%95%E8%AE%BA/%E7%AE%80%E5%8D%95%E9%9A%8F%E6%9C%BA%E6%8A%BD%E6%A0%B7/" class="">01.简单随机抽样</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/ch6/%E7%BB%93%E6%9E%84%E9%98%85%E8%AF%BB%E6%96%B9%E6%B3%95%E8%AE%BA/%E7%AD%89%E8%B7%9D%E6%8A%BD%E6%A0%B7/" class="">02.等距抽样</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/ch6/%E7%BB%93%E6%9E%84%E9%98%85%E8%AF%BB%E6%96%B9%E6%B3%95%E8%AE%BA/%E6%95%B4%E7%BE%A4%E6%8A%BD%E6%A0%B7/" class="">03.整群抽样</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/ch6/%E7%BB%93%E6%9E%84%E9%98%85%E8%AF%BB%E6%96%B9%E6%B3%95%E8%AE%BA/%E5%88%86%E5%B1%82%E6%8A%BD%E6%A0%B7/" class="">04.分层抽样</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/ch6/%E7%BB%93%E6%9E%84%E9%98%85%E8%AF%BB%E6%96%B9%E6%B3%95%E8%AE%BA/%E4%BE%BF%E5%88%A9%E6%8A%BD%E6%A0%B7/" class="">05.便利抽样</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/ch6/%E7%BB%93%E6%9E%84%E9%98%85%E8%AF%BB%E6%96%B9%E6%B3%95%E8%AE%BA/%E4%B8%93%E5%AE%B6%E6%8A%BD%E6%A0%B7/" class="">06.专家抽样</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/ch6/%E7%BB%93%E6%9E%84%E9%98%85%E8%AF%BB%E6%96%B9%E6%B3%95%E8%AE%BA/%E9%85%8D%E9%A2%9D%E6%8A%BD%E6%A0%B7/" class="">07.配额抽样</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/ch6/%E7%BB%93%E6%9E%84%E9%98%85%E8%AF%BB%E6%96%B9%E6%B3%95%E8%AE%BA/%E9%9B%AA%E7%90%83%E6%8A%BD%E6%A0%B7/" class="">08.雪球抽样</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/ch6/%E7%BB%93%E6%9E%84%E9%98%85%E8%AF%BB%E6%96%B9%E6%B3%95%E8%AE%BA/%E7%BB%BC%E5%90%88%E7%90%86%E8%A7%A3/" class="">09.综合理解</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>09.综合理解</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#概率抽样阅读与非概率抽样阅读的综合理解">概率抽样阅读与非概率抽样阅读的综合理解</a>
+      <ul>
+        <li><a href="#概率抽样阅读简化图示">概率抽样阅读简化图示</a></li>
+        <li><a href="#选择概率抽样阅读的前提">选择概率抽样阅读的前提</a></li>
+        <li><a href="#非概率抽样阅读简化图示">非概率抽样阅读简化图示</a></li>
+        <li><a href="#选择非概率抽样阅读的前提">选择非概率抽样阅读的前提</a></li>
+        <li><a href="#概率抽样阅读与非概率抽样阅读的整体区别">概率抽样阅读与非概率抽样阅读的整体区别</a></li>
+        <li><a href="#changelog">Changelog</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="概率抽样阅读与非概率抽样阅读的综合理解">
+  概率抽样阅读与非概率抽样阅读的综合理解
+  <a class="anchor" href="#%e6%a6%82%e7%8e%87%e6%8a%bd%e6%a0%b7%e9%98%85%e8%af%bb%e4%b8%8e%e9%9d%9e%e6%a6%82%e7%8e%87%e6%8a%bd%e6%a0%b7%e9%98%85%e8%af%bb%e7%9a%84%e7%bb%bc%e5%90%88%e7%90%86%e8%a7%a3">#</a>
+</h1>
+<p>我们在概率抽样阅读中提到了简单随机抽样阅读、等距抽样阅读、整群抽样阅读、分层抽样阅读，他们都强调章节选择的随机性。概率抽样阅读旨在以客观角度引入随机化选择消除人为偏见，所以它体现了书本所有章节都有被选择到的公平机会。简单来说，非概率抽样的主要决定因素是「工具」。</p>
+<h2 id="概率抽样阅读简化图示">
+  概率抽样阅读简化图示
+  <a class="anchor" href="#%e6%a6%82%e7%8e%87%e6%8a%bd%e6%a0%b7%e9%98%85%e8%af%bb%e7%ae%80%e5%8c%96%e5%9b%be%e7%a4%ba">#</a>
+</h2>
+<p>
+  <img src="https://pbox.online/202306021651510.png" alt="image-20230602165115455" /></p>
+<h2 id="选择概率抽样阅读的前提">
+  选择概率抽样阅读的前提
+  <a class="anchor" href="#%e9%80%89%e6%8b%a9%e6%a6%82%e7%8e%87%e6%8a%bd%e6%a0%b7%e9%98%85%e8%af%bb%e7%9a%84%e5%89%8d%e6%8f%90">#</a>
+</h2>
+<ol>
+<li>阅读者希望最大程度减少对全书的抽样偏差，规避人为抽样的样章导致对全书代表性过高或代表性不足的风险。</li>
+<li>当一本书包含的主题、叙事、人物、情节等非常多样化时，使用概率抽样能够最大幅度增加代表全书的样本章节。</li>
+</ol>
+<p>而诸如便利抽样阅读、专家抽样阅读、配额抽样阅读和雪球抽样阅读等非概率抽样方法，就致力于更深入的阅读全书的某一些模块，它不考虑全书所有的章节都可能被选取的机会，反而更依赖阅读者本人选择样本。比如阅读者在阅读之前已经设定的相对明确的阅读目标、阅读者已有的知识和经验、阅读者的主观判断、阅读者当前拥有的时空情境、人际、情绪等阅读条件的便利性等。简单来说，非概率抽样的主要决定因素是「人」。</p>
+<h2 id="非概率抽样阅读简化图示">
+  非概率抽样阅读简化图示
+  <a class="anchor" href="#%e9%9d%9e%e6%a6%82%e7%8e%87%e6%8a%bd%e6%a0%b7%e9%98%85%e8%af%bb%e7%ae%80%e5%8c%96%e5%9b%be%e7%a4%ba">#</a>
+</h2>
+<p>
+  <img src="https://pbox.online/202306021815735.png" alt="image-20230602181548711" /></p>
+<h2 id="选择非概率抽样阅读的前提">
+  选择非概率抽样阅读的前提
+  <a class="anchor" href="#%e9%80%89%e6%8b%a9%e9%9d%9e%e6%a6%82%e7%8e%87%e6%8a%bd%e6%a0%b7%e9%98%85%e8%af%bb%e7%9a%84%e5%89%8d%e6%8f%90">#</a>
+</h2>
+<p>因为非概率章节抽样不考虑整本书的所有章节，所以在下述情形更可能采取非概率抽样方法：</p>
+<ol>
+<li>阅读者在阅读之前已经明确希望对某些章节进行阅读而不希望对全书展开理解。</li>
+<li>阅读者希望对书中某一个章节做一些试探性的阅读，看看能不能激活自己的阅读兴趣。</li>
+<li>阅读者当前所拥有的抽样条件相当有限，不希望自己花太多时间精力就能快速找到章节。</li>
+</ol>
+<h2 id="概率抽样阅读与非概率抽样阅读的整体区别">
+  概率抽样阅读与非概率抽样阅读的整体区别
+  <a class="anchor" href="#%e6%a6%82%e7%8e%87%e6%8a%bd%e6%a0%b7%e9%98%85%e8%af%bb%e4%b8%8e%e9%9d%9e%e6%a6%82%e7%8e%87%e6%8a%bd%e6%a0%b7%e9%98%85%e8%af%bb%e7%9a%84%e6%95%b4%e4%bd%93%e5%8c%ba%e5%88%ab">#</a>
+</h2>
+<table>
+<thead>
+<tr>
+<th>要点</th>
+<th>概率抽样阅读</th>
+<th>非概率抽样阅读</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>抽取的样章对全书代表的程度</td>
+<td>↓</td>
+<td>↑</td>
+</tr>
+<tr>
+<td>抽样过程中对阅读者已有知识或经验的依赖程度</td>
+<td>↓</td>
+<td>↑</td>
+</tr>
+<tr>
+<td>抽样过程中对计算机（随机生成数据）的依赖程度</td>
+<td>↑</td>
+<td>↓</td>
+</tr>
+<tr>
+<td>抽样过程中对阅读者当前拥有的时空/人际/情绪等情境的依赖程度</td>
+<td>↓</td>
+<td>↑</td>
+</tr>
+<tr>
+<td>整体抽样的时间心力成本消耗程度</td>
+<td>↑</td>
+<td>↓</td>
+</tr>
+</tbody>
+</table>
+<h2 id="changelog">
+  Changelog
+  <a class="anchor" href="#changelog">#</a>
+</h2>
+<p>20230601 22:03 1.0</p>
+<p>20230602 18:12 1.1 增加概率抽样与非概率抽样图示的简化理解图</p>
+<p>Ref</p>
+<p>《聪明的阅读者》</p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#概率抽样阅读与非概率抽样阅读的综合理解">概率抽样阅读与非概率抽样阅读的综合理解</a>
+      <ul>
+        <li><a href="#概率抽样阅读简化图示">概率抽样阅读简化图示</a></li>
+        <li><a href="#选择概率抽样阅读的前提">选择概率抽样阅读的前提</a></li>
+        <li><a href="#非概率抽样阅读简化图示">非概率抽样阅读简化图示</a></li>
+        <li><a href="#选择非概率抽样阅读的前提">选择非概率抽样阅读的前提</a></li>
+        <li><a href="#概率抽样阅读与非概率抽样阅读的整体区别">概率抽样阅读与非概率抽样阅读的整体区别</a></li>
+        <li><a href="#changelog">Changelog</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

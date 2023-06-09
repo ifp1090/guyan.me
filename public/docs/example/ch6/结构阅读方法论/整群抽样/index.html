@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="如何对一本书进行整群抽样阅读？ # 我们在前两篇抽样方法文章中分别提到两个书本抽样方法「简单随机抽样」和「等距抽样」，它们两种抽样方式都是从全书中只选择一些个别章节来判断权重。但很多书的作者在写书时就将章节进行了权重考量，
+比如一本书的安排是这样的：
+部分 章节 第一部分 1~2 第二部分 3 第三部分 4-10 第四部分 11-12 如果将上述四部分章节数量由多到少进行排序，会发现第三部分分配的章节最多。在这里我们做一个「章节数量多就是作者想更多介绍进而属于更权重章节的范畴」的假设，那么我们可能要优先阅读第三部分。但如果我们按照之前介绍的两种抽样方式，抽样结果可能会类似这样（随机）：
+简单随机抽样：3/7/11 等距抽样：1/5/9/13 这可能忽略了作者对章节进行整体归类的信号暗示，可能不容易抓住全书权重。
+如何解决？
+我们可以暂缓一次选择一个章节然后再汇总的抽样方法，而是一开始就选择一个「章群」抽样。
+整群抽样步骤如下：
+1.对全书章节进行整群分类 # 最基础的分类方法就是参考作者为全书章节的整体划分，比如《如何达成目标》一共有13章，但作者直接在目录中将其划分为「准备就绪、预备开始、行动起来」三个部分：
+又比如《人是如何学习的-II》全书一共10章，而在中文序中提到全书分成「文化的复杂影响、学习的类型与过程、知识与推理、学习动机、对学校学习的启示、学习技术、贯穿一生的学习」七大主题：
+再比如《行为科学研究方法》在译者序中将全书16章分成五大部分：
+一旦我们在书本直接提供的书本结构说明中找到了对全书「章节群」的划分信息，就可以将其视为对整本书的整群抽样个数。
+2.使用简单随机抽样法抽取群章（部分/主题等） # 与「简单随机抽样」操作方法类似，唯一区别在于我们通过简单随机抽样抽出来的是多个章节，而这时候我们只需要抽取其中1个群章即可，所以我们最终需要阅读的不是一个一个的章节，而是一个或多个章节群。
+需要注意的是 试验统计网不支持抽取数量为1的简单随机抽样，所以我们如果希望自己从选取的章节群中选取一个章节群进行阅读，只需要随机制定一个数字即可。比如《人是如何学习的-II》一共有7个主题，我们就在1~7中随机选择一个主题，然后根据该主题在目录中找到对应的章群；《如何达成目标》一书有3个部分，我们就从1~3中随机选择一部分，找到该部分对应的章群，直接开始阅读即可。
+而如果我们的抽样数量＞1，就可以参考简单随机抽样的方法通过试验统计网进行抽样。
+3.对抽取的章群启动文本细读流程 # 这本书参考「文本细读方法论」，不再展开。
+整群抽样图示 # 整群章节抽样流程细化如下：
+整群抽样的优缺点 # 由此可以发现，整群抽样相比简单随机抽样与等距抽样，有三个明显优点：
+整群抽样抽取的一般是多个章节组成的大样本，而非彼此独立的小章节，所以大幅度降低了章节抽样的时间与精力成本。 整群章节抽样大都基于书中目录、序言、导言、后记等给到相对明显的提示对全书进行结构划分（还可通过性别、身份、角色、区域、年龄等维度），所以整群的建立速度相对迅速。 一旦建立了章群的结构，就能马上对章群展开文本细读工作，相对传统从头看到尾的阅读习惯，整群抽样后更强调对文本阅读的深度理解，容易对章群形成更深入的认知。 当然，整群抽样也存在着一些缺陷，比如一旦整群划分标准设定完毕开始抽样后，就忽略了其他未抽中章群可能包含的差异化信息，比如如果抽取的章节群内某一章节与其他章群的一个或多个章节存在特定关联，而整群抽样就觉察不出这种外在关系。在这种状况下，提高整群抽样的数量可能是一个可以尝试的方案，但也带来了更多增细阅读的成本。此外，如果整群抽样前发现书中未能有关于全书结构的分类信息，而且也较难对全书进行结构化分类，这就带来了整群抽样的难度，比如可能需要引入后续「分层章节抽样」的策略，或者将不同抽样策略进行叠加以获得更精准的权重。
+Changelog # 20230524 1.0
+20230525 1.1 增补图示
+20230526 1.2 调整文本，增加整群抽样的优点与缺点
+Ref：
+《聪明的阅读者》">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="03.整群抽样" />
+<meta property="og:description" content="如何对一本书进行整群抽样阅读？ # 我们在前两篇抽样方法文章中分别提到两个书本抽样方法「简单随机抽样」和「等距抽样」，它们两种抽样方式都是从全书中只选择一些个别章节来判断权重。但很多书的作者在写书时就将章节进行了权重考量，
+比如一本书的安排是这样的：
+部分 章节 第一部分 1~2 第二部分 3 第三部分 4-10 第四部分 11-12 如果将上述四部分章节数量由多到少进行排序，会发现第三部分分配的章节最多。在这里我们做一个「章节数量多就是作者想更多介绍进而属于更权重章节的范畴」的假设，那么我们可能要优先阅读第三部分。但如果我们按照之前介绍的两种抽样方式，抽样结果可能会类似这样（随机）：
+简单随机抽样：3/7/11 等距抽样：1/5/9/13 这可能忽略了作者对章节进行整体归类的信号暗示，可能不容易抓住全书权重。
+如何解决？
+我们可以暂缓一次选择一个章节然后再汇总的抽样方法，而是一开始就选择一个「章群」抽样。
+整群抽样步骤如下：
+1.对全书章节进行整群分类 # 最基础的分类方法就是参考作者为全书章节的整体划分，比如《如何达成目标》一共有13章，但作者直接在目录中将其划分为「准备就绪、预备开始、行动起来」三个部分：
+又比如《人是如何学习的-II》全书一共10章，而在中文序中提到全书分成「文化的复杂影响、学习的类型与过程、知识与推理、学习动机、对学校学习的启示、学习技术、贯穿一生的学习」七大主题：
+再比如《行为科学研究方法》在译者序中将全书16章分成五大部分：
+一旦我们在书本直接提供的书本结构说明中找到了对全书「章节群」的划分信息，就可以将其视为对整本书的整群抽样个数。
+2.使用简单随机抽样法抽取群章（部分/主题等） # 与「简单随机抽样」操作方法类似，唯一区别在于我们通过简单随机抽样抽出来的是多个章节，而这时候我们只需要抽取其中1个群章即可，所以我们最终需要阅读的不是一个一个的章节，而是一个或多个章节群。
+需要注意的是 试验统计网不支持抽取数量为1的简单随机抽样，所以我们如果希望自己从选取的章节群中选取一个章节群进行阅读，只需要随机制定一个数字即可。比如《人是如何学习的-II》一共有7个主题，我们就在1~7中随机选择一个主题，然后根据该主题在目录中找到对应的章群；《如何达成目标》一书有3个部分，我们就从1~3中随机选择一部分，找到该部分对应的章群，直接开始阅读即可。
+而如果我们的抽样数量＞1，就可以参考简单随机抽样的方法通过试验统计网进行抽样。
+3.对抽取的章群启动文本细读流程 # 这本书参考「文本细读方法论」，不再展开。
+整群抽样图示 # 整群章节抽样流程细化如下：
+整群抽样的优缺点 # 由此可以发现，整群抽样相比简单随机抽样与等距抽样，有三个明显优点：
+整群抽样抽取的一般是多个章节组成的大样本，而非彼此独立的小章节，所以大幅度降低了章节抽样的时间与精力成本。 整群章节抽样大都基于书中目录、序言、导言、后记等给到相对明显的提示对全书进行结构划分（还可通过性别、身份、角色、区域、年龄等维度），所以整群的建立速度相对迅速。 一旦建立了章群的结构，就能马上对章群展开文本细读工作，相对传统从头看到尾的阅读习惯，整群抽样后更强调对文本阅读的深度理解，容易对章群形成更深入的认知。 当然，整群抽样也存在着一些缺陷，比如一旦整群划分标准设定完毕开始抽样后，就忽略了其他未抽中章群可能包含的差异化信息，比如如果抽取的章节群内某一章节与其他章群的一个或多个章节存在特定关联，而整群抽样就觉察不出这种外在关系。在这种状况下，提高整群抽样的数量可能是一个可以尝试的方案，但也带来了更多增细阅读的成本。此外，如果整群抽样前发现书中未能有关于全书结构的分类信息，而且也较难对全书进行结构化分类，这就带来了整群抽样的难度，比如可能需要引入后续「分层章节抽样」的策略，或者将不同抽样策略进行叠加以获得更精准的权重。
+Changelog # 20230524 1.0
+20230525 1.1 增补图示
+20230526 1.2 调整文本，增加整群抽样的优点与缺点
+Ref：
+《聪明的阅读者》" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://example.com/docs/example/ch6/%E7%BB%93%E6%9E%84%E9%98%85%E8%AF%BB%E6%96%B9%E6%B3%95%E8%AE%BA/%E6%95%B4%E7%BE%A4%E6%8A%BD%E6%A0%B7/" /><meta property="article:section" content="docs" />
+
+
+<title>03.整群抽样 | Gu Yan&#39;s 1st Book</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.4f0117e74e5337280f18eb9641eae520cb4b25adcf5dd64fafad4664145a5957.css" integrity="sha256-TwEX505TNygPGOuWQerlIMtLJa3PXdZPr61GZBRaWVc=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.3f9b2964ad484a7f28da1f241feaef51d829b7ebb63412c06efa209cf410a742.js" integrity="sha256-P5spZK1ISn8o2h8kH&#43;rvUdgpt&#43;u2NBLAbvognPQQp0I=" crossorigin="anonymous"></script>
+
+  <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Gu Yan&#39;s 1st Book</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <a href="/docs/example/" class="">阅读方法</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-b4f783ac35c6ebf0a727d442f9a1149d" class="toggle"  />
+    <label for="section-b4f783ac35c6ebf0a727d442f9a1149d" class="flex justify-between">
+      <a href="/docs/example/ch5/" class="">第五章</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/ch5/%E4%B9%A6%E7%B1%8D%E6%8A%BD%E6%A0%B7%E6%96%B9%E6%B3%95%E8%AE%BA/" class="">书籍抽样方法论</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/ch5/%E4%B9%A6%E7%B1%8D%E6%8A%BD%E6%A0%B7%E6%96%B9%E6%B3%95%E8%AE%BA/%E7%AE%80%E5%8D%95%E9%9A%8F%E6%9C%BA%E6%8A%BD%E6%A0%B7/" class="">01.简单随机抽样</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/ch5/%E4%B9%A6%E7%B1%8D%E6%8A%BD%E6%A0%B7%E6%96%B9%E6%B3%95%E8%AE%BA/%E7%AD%89%E8%B7%9D%E6%8A%BD%E6%A0%B7/" class="">02.等距抽样</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/ch5/%E4%B9%A6%E7%B1%8D%E6%8A%BD%E6%A0%B7%E6%96%B9%E6%B3%95%E8%AE%BA/%E6%95%B4%E7%BE%A4%E6%8A%BD%E6%A0%B7/" class="">03.整群抽样</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/ch5/%E4%B9%A6%E7%B1%8D%E6%8A%BD%E6%A0%B7%E6%96%B9%E6%B3%95%E8%AE%BA/%E5%88%86%E5%B1%82%E6%8A%BD%E6%A0%B7/" class="">04.分层抽样</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/ch5/%E4%B9%A6%E7%B1%8D%E6%8A%BD%E6%A0%B7%E6%96%B9%E6%B3%95%E8%AE%BA/%E4%BE%BF%E5%88%A9%E6%8A%BD%E6%A0%B7/" class="">05.便利抽样</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/ch5/%E4%B9%A6%E7%B1%8D%E6%8A%BD%E6%A0%B7%E6%96%B9%E6%B3%95%E8%AE%BA/%E4%B8%93%E5%AE%B6%E6%8A%BD%E6%A0%B7/" class="">06.专家抽样</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/ch5/%E4%B9%A6%E7%B1%8D%E6%8A%BD%E6%A0%B7%E6%96%B9%E6%B3%95%E8%AE%BA/%E9%85%8D%E9%A2%9D%E6%8A%BD%E6%A0%B7/" class="">07.配额抽样</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/ch5/%E4%B9%A6%E7%B1%8D%E6%8A%BD%E6%A0%B7%E6%96%B9%E6%B3%95%E8%AE%BA/%E9%9B%AA%E7%90%83%E6%8A%BD%E6%A0%B7/" class="">08.雪球抽样</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/ch5/%E4%B9%A6%E7%B1%8D%E6%8A%BD%E6%A0%B7%E6%96%B9%E6%B3%95%E8%AE%BA/%E7%BB%BC%E5%90%88%E7%90%86%E8%A7%A3/" class="">09.综合理解</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/ch6/" class="">第六章</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/ch6/%E7%BB%93%E6%9E%84%E9%98%85%E8%AF%BB%E6%96%B9%E6%B3%95%E8%AE%BA/" class="">结构阅读方法论</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/ch6/%E7%BB%93%E6%9E%84%E9%98%85%E8%AF%BB%E6%96%B9%E6%B3%95%E8%AE%BA/%E7%AE%80%E5%8D%95%E9%9A%8F%E6%9C%BA%E6%8A%BD%E6%A0%B7/" class="">01.简单随机抽样</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/ch6/%E7%BB%93%E6%9E%84%E9%98%85%E8%AF%BB%E6%96%B9%E6%B3%95%E8%AE%BA/%E7%AD%89%E8%B7%9D%E6%8A%BD%E6%A0%B7/" class="">02.等距抽样</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/ch6/%E7%BB%93%E6%9E%84%E9%98%85%E8%AF%BB%E6%96%B9%E6%B3%95%E8%AE%BA/%E6%95%B4%E7%BE%A4%E6%8A%BD%E6%A0%B7/" class="active">03.整群抽样</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/ch6/%E7%BB%93%E6%9E%84%E9%98%85%E8%AF%BB%E6%96%B9%E6%B3%95%E8%AE%BA/%E5%88%86%E5%B1%82%E6%8A%BD%E6%A0%B7/" class="">04.分层抽样</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/ch6/%E7%BB%93%E6%9E%84%E9%98%85%E8%AF%BB%E6%96%B9%E6%B3%95%E8%AE%BA/%E4%BE%BF%E5%88%A9%E6%8A%BD%E6%A0%B7/" class="">05.便利抽样</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/ch6/%E7%BB%93%E6%9E%84%E9%98%85%E8%AF%BB%E6%96%B9%E6%B3%95%E8%AE%BA/%E4%B8%93%E5%AE%B6%E6%8A%BD%E6%A0%B7/" class="">06.专家抽样</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/ch6/%E7%BB%93%E6%9E%84%E9%98%85%E8%AF%BB%E6%96%B9%E6%B3%95%E8%AE%BA/%E9%85%8D%E9%A2%9D%E6%8A%BD%E6%A0%B7/" class="">07.配额抽样</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/ch6/%E7%BB%93%E6%9E%84%E9%98%85%E8%AF%BB%E6%96%B9%E6%B3%95%E8%AE%BA/%E9%9B%AA%E7%90%83%E6%8A%BD%E6%A0%B7/" class="">08.雪球抽样</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/ch6/%E7%BB%93%E6%9E%84%E9%98%85%E8%AF%BB%E6%96%B9%E6%B3%95%E8%AE%BA/%E7%BB%BC%E5%90%88%E7%90%86%E8%A7%A3/" class="">09.综合理解</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>03.整群抽样</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#如何对一本书进行整群抽样阅读">如何对一本书进行整群抽样阅读？</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#1对全书章节进行整群分类">1.对全书章节进行整群分类</a></li>
+            <li><a href="#2使用简单随机抽样法抽取群章部分主题等">2.使用简单随机抽样法抽取群章（部分/主题等）</a></li>
+            <li><a href="#3对抽取的章群启动文本细读流程">3.对抽取的章群启动文本细读流程</a></li>
+          </ul>
+        </li>
+        <li><a href="#整群抽样图示">整群抽样图示</a></li>
+        <li><a href="#整群抽样的优缺点">整群抽样的优缺点</a></li>
+        <li><a href="#changelog">Changelog</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="如何对一本书进行整群抽样阅读">
+  如何对一本书进行整群抽样阅读？
+  <a class="anchor" href="#%e5%a6%82%e4%bd%95%e5%af%b9%e4%b8%80%e6%9c%ac%e4%b9%a6%e8%bf%9b%e8%a1%8c%e6%95%b4%e7%be%a4%e6%8a%bd%e6%a0%b7%e9%98%85%e8%af%bb">#</a>
+</h1>
+<p>我们在前两篇抽样方法文章中分别提到两个书本抽样方法「简单随机抽样」和「等距抽样」，它们两种抽样方式都是从全书中只选择一些个别章节来判断权重。但很多书的作者在写书时就将章节进行了权重考量，</p>
+<p>比如一本书的安排是这样的：</p>
+<table>
+<thead>
+<tr>
+<th>部分</th>
+<th>章节</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>第一部分</td>
+<td>1~2</td>
+</tr>
+<tr>
+<td>第二部分</td>
+<td>3</td>
+</tr>
+<tr>
+<td>第三部分</td>
+<td>4-10</td>
+</tr>
+<tr>
+<td>第四部分</td>
+<td>11-12</td>
+</tr>
+</tbody>
+</table>
+<p>如果将上述四部分章节数量由多到少进行排序，会发现第三部分分配的章节最多。在这里我们做一个「章节数量多就是作者想更多介绍进而属于更权重章节的范畴」的假设，那么我们可能要优先阅读第三部分。但如果我们按照之前介绍的两种抽样方式，抽样结果可能会类似这样（随机）：</p>
+<ul>
+<li>简单随机抽样：3/7/11</li>
+<li>等距抽样：1/5/9/13</li>
+</ul>
+<p>这可能忽略了作者对章节进行整体归类的信号暗示，可能不容易抓住全书权重。</p>
+<p>如何解决？</p>
+<p>我们可以暂缓一次选择一个章节然后再汇总的抽样方法，而是一开始就选择一个「章群」抽样。</p>
+<p>整群抽样步骤如下：</p>
+<h3 id="1对全书章节进行整群分类">
+  1.对全书章节进行整群分类
+  <a class="anchor" href="#1%e5%af%b9%e5%85%a8%e4%b9%a6%e7%ab%a0%e8%8a%82%e8%bf%9b%e8%a1%8c%e6%95%b4%e7%be%a4%e5%88%86%e7%b1%bb">#</a>
+</h3>
+<p>最基础的分类方法就是参考作者为全书章节的整体划分，比如《如何达成目标》一共有13章，但作者直接在目录中将其划分为「准备就绪、预备开始、行动起来」三个部分：</p>
+<p>
+  <img src="https://pbox.online/202305270814360.png" alt="image-20230527081454325" /></p>
+<p>又比如《人是如何学习的-II》全书一共10章，而在中文序中提到全书分成「文化的复杂影响、学习的类型与过程、知识与推理、学习动机、对学校学习的启示、学习技术、贯穿一生的学习」七大主题：</p>
+<p>
+  <img src="https://pbox.online/202305270815914.png" alt="image-20230527081500872" /></p>
+<p>再比如《行为科学研究方法》在译者序中将全书16章分成五大部分：</p>
+<p>
+  <img src="https://pbox.online/202305270815230.png" alt="image-20230527081507195" /></p>
+<p>一旦我们在书本直接提供的书本结构说明中找到了对全书「章节群」的划分信息，就可以将其视为对整本书的整群抽样个数。</p>
+<h3 id="2使用简单随机抽样法抽取群章部分主题等">
+  2.使用简单随机抽样法抽取群章（部分/主题等）
+  <a class="anchor" href="#2%e4%bd%bf%e7%94%a8%e7%ae%80%e5%8d%95%e9%9a%8f%e6%9c%ba%e6%8a%bd%e6%a0%b7%e6%b3%95%e6%8a%bd%e5%8f%96%e7%be%a4%e7%ab%a0%e9%83%a8%e5%88%86%e4%b8%bb%e9%a2%98%e7%ad%89">#</a>
+</h3>
+<p>与「简单随机抽样」操作方法类似，唯一区别在于我们通过简单随机抽样抽出来的是多个章节，而这时候我们只需要抽取其中1个群章即可，所以我们最终需要阅读的不是一个一个的章节，而是一个或多个章节群。</p>
+<p>需要注意的是
+  <a href="www.trialstats.com"><strong>试验统计网</strong></a>不支持抽取数量为1的简单随机抽样，所以我们如果希望自己从选取的章节群中选取一个章节群进行阅读，只需要随机制定一个数字即可。比如《人是如何学习的-II》一共有7个主题，我们就在1~7中随机选择一个主题，然后根据该主题在目录中找到对应的章群；《如何达成目标》一书有3个部分，我们就从1~3中随机选择一部分，找到该部分对应的章群，直接开始阅读即可。</p>
+<p>而如果我们的抽样数量＞1，就可以参考简单随机抽样的方法通过试验统计网进行抽样。</p>
+<h3 id="3对抽取的章群启动文本细读流程">
+  3.对抽取的章群启动文本细读流程
+  <a class="anchor" href="#3%e5%af%b9%e6%8a%bd%e5%8f%96%e7%9a%84%e7%ab%a0%e7%be%a4%e5%90%af%e5%8a%a8%e6%96%87%e6%9c%ac%e7%bb%86%e8%af%bb%e6%b5%81%e7%a8%8b">#</a>
+</h3>
+<p>这本书参考「文本细读方法论」，不再展开。</p>
+<h2 id="整群抽样图示">
+  整群抽样图示
+  <a class="anchor" href="#%e6%95%b4%e7%be%a4%e6%8a%bd%e6%a0%b7%e5%9b%be%e7%a4%ba">#</a>
+</h2>
+<p>整群章节抽样流程细化如下：</p>
+<p>
+  <img src="https://pbox.online/202305270815056.png" alt="image-20230527081528017" /></p>
+<h2 id="整群抽样的优缺点">
+  整群抽样的优缺点
+  <a class="anchor" href="#%e6%95%b4%e7%be%a4%e6%8a%bd%e6%a0%b7%e7%9a%84%e4%bc%98%e7%bc%ba%e7%82%b9">#</a>
+</h2>
+<p>由此可以发现，整群抽样相比简单随机抽样与等距抽样，有三个明显优点：</p>
+<ol>
+<li>整群抽样抽取的一般是多个章节组成的大样本，而非彼此独立的小章节，所以大幅度降低了章节抽样的时间与精力成本。</li>
+<li>整群章节抽样大都基于书中目录、序言、导言、后记等给到相对明显的提示对全书进行结构划分（还可通过性别、身份、角色、区域、年龄等维度），所以整群的建立速度相对迅速。</li>
+<li>一旦建立了章群的结构，就能马上对章群展开文本细读工作，相对传统从头看到尾的阅读习惯，整群抽样后更强调对文本阅读的深度理解，容易对章群形成更深入的认知。</li>
+</ol>
+<p>当然，整群抽样也存在着一些缺陷，比如一旦整群划分标准设定完毕开始抽样后，就忽略了其他未抽中章群可能包含的差异化信息，比如如果抽取的章节群内某一章节与其他章群的一个或多个章节存在特定关联，而整群抽样就觉察不出这种外在关系。在这种状况下，提高整群抽样的数量可能是一个可以尝试的方案，但也带来了更多增细阅读的成本。此外，如果整群抽样前发现书中未能有关于全书结构的分类信息，而且也较难对全书进行结构化分类，这就带来了整群抽样的难度，比如可能需要引入后续「分层章节抽样」的策略，或者将不同抽样策略进行叠加以获得更精准的权重。</p>
+<h2 id="changelog">
+  Changelog
+  <a class="anchor" href="#changelog">#</a>
+</h2>
+<p>20230524 1.0</p>
+<p>20230525 1.1 增补图示</p>
+<p>20230526 1.2 调整文本，增加整群抽样的优点与缺点</p>
+<p>Ref：</p>
+<p>《聪明的阅读者》</p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#如何对一本书进行整群抽样阅读">如何对一本书进行整群抽样阅读？</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#1对全书章节进行整群分类">1.对全书章节进行整群分类</a></li>
+            <li><a href="#2使用简单随机抽样法抽取群章部分主题等">2.使用简单随机抽样法抽取群章（部分/主题等）</a></li>
+            <li><a href="#3对抽取的章群启动文本细读流程">3.对抽取的章群启动文本细读流程</a></li>
+          </ul>
+        </li>
+        <li><a href="#整群抽样图示">整群抽样图示</a></li>
+        <li><a href="#整群抽样的优缺点">整群抽样的优缺点</a></li>
+        <li><a href="#changelog">Changelog</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

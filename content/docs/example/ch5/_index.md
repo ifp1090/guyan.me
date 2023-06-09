@@ -1,5 +1,5 @@
 ---
-bookCollapseSection: false
+bookCollapseSection: true
 weight: 10
 title: 第五章
 ---

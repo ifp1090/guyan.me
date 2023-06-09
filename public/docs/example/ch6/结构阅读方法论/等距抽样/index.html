@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="如何对一本书进行等距抽样阅读？ # 上篇文章中提到通过 简单随机抽样法 选取一本书的核心章节，我尝试通过试验统计网对《行为科学统计》这本书进行三次随机抽样，结果如下：
+随机抽样次数 抽样结果 第一次 4, 6, 9, 10, 14 第二次 1, 4, 6, 7, 8 第三次 1, 6, 7, 10, 12 参考上篇文章我们知道，《行为科学统计》全书一共19章，通过计算确定抽样5章，那如何进一步判断简单随机抽样的抽样合理性呢？一个简单的方法就是看抽样章节对全书篇幅的覆盖率。
+以第一次抽样的结果为例，我们如果想知道随机抽中的章节所未覆盖的章节数量的话，是这样的结果：
+如上图所示，灰色部分就是每轮抽样未覆盖的数量：
+第一轮：3/1/2/3/5 第二轮：2/1/11 第三轮：4/2/1/7 从上述结果来看，如果从全书抽样的覆盖率来看，除了第一次抽样结果相对合理，如果我们抽中了第二次或者第三次，那我们遗失全书章节的最大数量就分别是11章、7章，这就是简单随机抽样方法给我们带来的不利之处。
+如何解决？
+我们可以在简单随机抽样的基础上进行适当修正，这就是等距抽样。
+顾名思义，等距抽样就是将全书章节按照指定间隔进行章节抽取。如何判断指定间隔呢？这时候我们需要借鉴上一篇文章中提到的 简单随机抽样法 中的公式：
+抽样章节 = 书本章节总数 × 20% × 系数（1.1~1.6）
+注：为了计算方便，我们以后将系数默认设为1.3
+按照这个公式计算《行为科学统计》的抽样章节数量为5。
+然后我们再计算按照这个公式计算等距间隔数：
+全书章节总数 ÷ 抽样章节数 = 等距间隔数
+19/5 = 3.8 ≈ 4 （四舍五入）
+这样我们就确认了《行为科学统计》的间隔数量为4
+那么这本书我们需要抽样的章节就是第1章、第6章、第11章、第16章：
+按照8020原则，我们最终抽取的只是全书章节的20%，一般书籍的章节总数不会超过50，那么这个间隔最大不可能超过5。那我们可以按照这个数值制作一个等距抽样的Excel表格：
+表格链接在此，这样我们就可以直接通过表格来快速定位我们需要等距抽样的章节了。
+Ref：
+《聪明的阅读者》
+20230522">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="02.等距抽样" />
+<meta property="og:description" content="如何对一本书进行等距抽样阅读？ # 上篇文章中提到通过 简单随机抽样法 选取一本书的核心章节，我尝试通过试验统计网对《行为科学统计》这本书进行三次随机抽样，结果如下：
+随机抽样次数 抽样结果 第一次 4, 6, 9, 10, 14 第二次 1, 4, 6, 7, 8 第三次 1, 6, 7, 10, 12 参考上篇文章我们知道，《行为科学统计》全书一共19章，通过计算确定抽样5章，那如何进一步判断简单随机抽样的抽样合理性呢？一个简单的方法就是看抽样章节对全书篇幅的覆盖率。
+以第一次抽样的结果为例，我们如果想知道随机抽中的章节所未覆盖的章节数量的话，是这样的结果：
+如上图所示，灰色部分就是每轮抽样未覆盖的数量：
+第一轮：3/1/2/3/5 第二轮：2/1/11 第三轮：4/2/1/7 从上述结果来看，如果从全书抽样的覆盖率来看，除了第一次抽样结果相对合理，如果我们抽中了第二次或者第三次，那我们遗失全书章节的最大数量就分别是11章、7章，这就是简单随机抽样方法给我们带来的不利之处。
+如何解决？
+我们可以在简单随机抽样的基础上进行适当修正，这就是等距抽样。
+顾名思义，等距抽样就是将全书章节按照指定间隔进行章节抽取。如何判断指定间隔呢？这时候我们需要借鉴上一篇文章中提到的 简单随机抽样法 中的公式：
+抽样章节 = 书本章节总数 × 20% × 系数（1.1~1.6）
+注：为了计算方便，我们以后将系数默认设为1.3
+按照这个公式计算《行为科学统计》的抽样章节数量为5。
+然后我们再计算按照这个公式计算等距间隔数：
+全书章节总数 ÷ 抽样章节数 = 等距间隔数
+19/5 = 3.8 ≈ 4 （四舍五入）
+这样我们就确认了《行为科学统计》的间隔数量为4
+那么这本书我们需要抽样的章节就是第1章、第6章、第11章、第16章：
+按照8020原则，我们最终抽取的只是全书章节的20%，一般书籍的章节总数不会超过50，那么这个间隔最大不可能超过5。那我们可以按照这个数值制作一个等距抽样的Excel表格：
+表格链接在此，这样我们就可以直接通过表格来快速定位我们需要等距抽样的章节了。
+Ref：
+《聪明的阅读者》
+20230522" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://example.com/docs/example/ch6/%E7%BB%93%E6%9E%84%E9%98%85%E8%AF%BB%E6%96%B9%E6%B3%95%E8%AE%BA/%E7%AD%89%E8%B7%9D%E6%8A%BD%E6%A0%B7/" /><meta property="article:section" content="docs" />
+
+
+<title>02.等距抽样 | Gu Yan&#39;s 1st Book</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.4f0117e74e5337280f18eb9641eae520cb4b25adcf5dd64fafad4664145a5957.css" integrity="sha256-TwEX505TNygPGOuWQerlIMtLJa3PXdZPr61GZBRaWVc=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.3f9b2964ad484a7f28da1f241feaef51d829b7ebb63412c06efa209cf410a742.js" integrity="sha256-P5spZK1ISn8o2h8kH&#43;rvUdgpt&#43;u2NBLAbvognPQQp0I=" crossorigin="anonymous"></script>
+
+  <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Gu Yan&#39;s 1st Book</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <a href="/docs/example/" class="">阅读方法</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-b4f783ac35c6ebf0a727d442f9a1149d" class="toggle"  />
+    <label for="section-b4f783ac35c6ebf0a727d442f9a1149d" class="flex justify-between">
+      <a href="/docs/example/ch5/" class="">第五章</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/ch5/%E4%B9%A6%E7%B1%8D%E6%8A%BD%E6%A0%B7%E6%96%B9%E6%B3%95%E8%AE%BA/" class="">书籍抽样方法论</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/ch5/%E4%B9%A6%E7%B1%8D%E6%8A%BD%E6%A0%B7%E6%96%B9%E6%B3%95%E8%AE%BA/%E7%AE%80%E5%8D%95%E9%9A%8F%E6%9C%BA%E6%8A%BD%E6%A0%B7/" class="">01.简单随机抽样</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/ch5/%E4%B9%A6%E7%B1%8D%E6%8A%BD%E6%A0%B7%E6%96%B9%E6%B3%95%E8%AE%BA/%E7%AD%89%E8%B7%9D%E6%8A%BD%E6%A0%B7/" class="">02.等距抽样</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/ch5/%E4%B9%A6%E7%B1%8D%E6%8A%BD%E6%A0%B7%E6%96%B9%E6%B3%95%E8%AE%BA/%E6%95%B4%E7%BE%A4%E6%8A%BD%E6%A0%B7/" class="">03.整群抽样</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/ch5/%E4%B9%A6%E7%B1%8D%E6%8A%BD%E6%A0%B7%E6%96%B9%E6%B3%95%E8%AE%BA/%E5%88%86%E5%B1%82%E6%8A%BD%E6%A0%B7/" class="">04.分层抽样</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/ch5/%E4%B9%A6%E7%B1%8D%E6%8A%BD%E6%A0%B7%E6%96%B9%E6%B3%95%E8%AE%BA/%E4%BE%BF%E5%88%A9%E6%8A%BD%E6%A0%B7/" class="">05.便利抽样</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/ch5/%E4%B9%A6%E7%B1%8D%E6%8A%BD%E6%A0%B7%E6%96%B9%E6%B3%95%E8%AE%BA/%E4%B8%93%E5%AE%B6%E6%8A%BD%E6%A0%B7/" class="">06.专家抽样</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/ch5/%E4%B9%A6%E7%B1%8D%E6%8A%BD%E6%A0%B7%E6%96%B9%E6%B3%95%E8%AE%BA/%E9%85%8D%E9%A2%9D%E6%8A%BD%E6%A0%B7/" class="">07.配额抽样</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/ch5/%E4%B9%A6%E7%B1%8D%E6%8A%BD%E6%A0%B7%E6%96%B9%E6%B3%95%E8%AE%BA/%E9%9B%AA%E7%90%83%E6%8A%BD%E6%A0%B7/" class="">08.雪球抽样</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/ch5/%E4%B9%A6%E7%B1%8D%E6%8A%BD%E6%A0%B7%E6%96%B9%E6%B3%95%E8%AE%BA/%E7%BB%BC%E5%90%88%E7%90%86%E8%A7%A3/" class="">09.综合理解</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/ch6/" class="">第六章</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/ch6/%E7%BB%93%E6%9E%84%E9%98%85%E8%AF%BB%E6%96%B9%E6%B3%95%E8%AE%BA/" class="">结构阅读方法论</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/ch6/%E7%BB%93%E6%9E%84%E9%98%85%E8%AF%BB%E6%96%B9%E6%B3%95%E8%AE%BA/%E7%AE%80%E5%8D%95%E9%9A%8F%E6%9C%BA%E6%8A%BD%E6%A0%B7/" class="">01.简单随机抽样</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/ch6/%E7%BB%93%E6%9E%84%E9%98%85%E8%AF%BB%E6%96%B9%E6%B3%95%E8%AE%BA/%E7%AD%89%E8%B7%9D%E6%8A%BD%E6%A0%B7/" class="active">02.等距抽样</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/ch6/%E7%BB%93%E6%9E%84%E9%98%85%E8%AF%BB%E6%96%B9%E6%B3%95%E8%AE%BA/%E6%95%B4%E7%BE%A4%E6%8A%BD%E6%A0%B7/" class="">03.整群抽样</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/ch6/%E7%BB%93%E6%9E%84%E9%98%85%E8%AF%BB%E6%96%B9%E6%B3%95%E8%AE%BA/%E5%88%86%E5%B1%82%E6%8A%BD%E6%A0%B7/" class="">04.分层抽样</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/ch6/%E7%BB%93%E6%9E%84%E9%98%85%E8%AF%BB%E6%96%B9%E6%B3%95%E8%AE%BA/%E4%BE%BF%E5%88%A9%E6%8A%BD%E6%A0%B7/" class="">05.便利抽样</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/ch6/%E7%BB%93%E6%9E%84%E9%98%85%E8%AF%BB%E6%96%B9%E6%B3%95%E8%AE%BA/%E4%B8%93%E5%AE%B6%E6%8A%BD%E6%A0%B7/" class="">06.专家抽样</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/ch6/%E7%BB%93%E6%9E%84%E9%98%85%E8%AF%BB%E6%96%B9%E6%B3%95%E8%AE%BA/%E9%85%8D%E9%A2%9D%E6%8A%BD%E6%A0%B7/" class="">07.配额抽样</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/ch6/%E7%BB%93%E6%9E%84%E9%98%85%E8%AF%BB%E6%96%B9%E6%B3%95%E8%AE%BA/%E9%9B%AA%E7%90%83%E6%8A%BD%E6%A0%B7/" class="">08.雪球抽样</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/example/ch6/%E7%BB%93%E6%9E%84%E9%98%85%E8%AF%BB%E6%96%B9%E6%B3%95%E8%AE%BA/%E7%BB%BC%E5%90%88%E7%90%86%E8%A7%A3/" class="">09.综合理解</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>02.等距抽样</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#如何对一本书进行等距抽样阅读">如何对一本书进行等距抽样阅读？</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="如何对一本书进行等距抽样阅读">
+  如何对一本书进行等距抽样阅读？
+  <a class="anchor" href="#%e5%a6%82%e4%bd%95%e5%af%b9%e4%b8%80%e6%9c%ac%e4%b9%a6%e8%bf%9b%e8%a1%8c%e7%ad%89%e8%b7%9d%e6%8a%bd%e6%a0%b7%e9%98%85%e8%af%bb">#</a>
+</h1>
+<p>上篇文章中提到通过 <strong>
+  <a href="https://mread.top/1388/">简单随机抽样法</a></strong> 选取一本书的核心章节，我尝试通过试验统计网对《行为科学统计》这本书进行三次随机抽样，结果如下：</p>
+<table>
+<thead>
+<tr>
+<th>随机抽样次数</th>
+<th>抽样结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>第一次</td>
+<td>4, 6, 9, 10, 14</td>
+</tr>
+<tr>
+<td>第二次</td>
+<td>1, 4, 6, 7, 8</td>
+</tr>
+<tr>
+<td>第三次</td>
+<td>1, 6, 7, 10, 12</td>
+</tr>
+</tbody>
+</table>
+<p>参考上篇文章我们知道，《行为科学统计》全书一共19章，通过计算确定抽样5章，那如何进一步判断简单随机抽样的抽样合理性呢？一个简单的方法就是看抽样章节对全书篇幅的覆盖率。</p>
+<p>以第一次抽样的结果为例，我们如果想知道随机抽中的章节所未覆盖的章节数量的话，是这样的结果：</p>
+<p>
+  <img src="https://pbox.online/202305270814227.png" alt="image-20230527081428206" /></p>
+<p>如上图所示，灰色部分就是每轮抽样未覆盖的数量：</p>
+<ul>
+<li>第一轮：3/1/2/3/5</li>
+<li>第二轮：2/1/11</li>
+<li>第三轮：4/2/1/7</li>
+</ul>
+<p>从上述结果来看，如果从全书抽样的覆盖率来看，除了第一次抽样结果相对合理，如果我们抽中了第二次或者第三次，那我们遗失全书章节的最大数量就分别是11章、7章，这就是简单随机抽样方法给我们带来的不利之处。</p>
+<p>如何解决？</p>
+<p>我们可以在简单随机抽样的基础上进行适当修正，这就是等距抽样。</p>
+<p>顾名思义，等距抽样就是将全书章节按照指定间隔进行章节抽取。如何判断指定间隔呢？这时候我们需要借鉴上一篇文章中提到的 <strong>
+  <a href="https://mread.top/1388/">简单随机抽样法</a></strong> 中的公式：</p>
+<blockquote>
+<p>抽样章节 = 书本章节总数 × 20% × 系数（1.1~1.6）</p>
+</blockquote>
+<p>注：为了计算方便，我们以后将系数默认设为1.3</p>
+<p>按照这个公式计算《行为科学统计》的抽样章节数量为5。</p>
+<p>然后我们再计算按照这个公式计算等距间隔数：</p>
+<blockquote>
+<p>全书章节总数 ÷ 抽样章节数 = 等距间隔数</p>
+</blockquote>
+<p>19/5 = 3.8 ≈ 4 （四舍五入）</p>
+<p>这样我们就确认了《行为科学统计》的间隔数量为4</p>
+<p>那么这本书我们需要抽样的章节就是第1章、第6章、第11章、第16章：</p>
+<p>
+  <img src="https://pbox.online/202305270814330.png" alt="image-20230527081435301" /></p>
+<p>按照8020原则，我们最终抽取的只是全书章节的20%，一般书籍的章节总数不会超过50，那么这个间隔最大不可能超过5。那我们可以按照这个数值制作一个等距抽样的Excel表格：</p>
+<p>
+  <img src="https://pbox.online/202305270814371.png" alt="image-20230527081440350" /></p>
+<p>
+  <a href="https://docs.qq.com/sheet/DQWtTUlROcWRkWGFj?tab=BB08J2"><strong>表格链接</strong></a>在此，这样我们就可以直接通过表格来快速定位我们需要等距抽样的章节了。</p>
+<p>Ref：</p>
+<p>《聪明的阅读者》</p>
+<p>20230522</p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#如何对一本书进行等距抽样阅读">如何对一本书进行等距抽样阅读？</a></li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
